@@ -17,18 +17,13 @@
 </head>
 <body>
 
-<canvas id="canvas" width="800" height="500"></canvas>
+<canvas id="canvas" width="410" height="430"></canvas>
 <div id="output"></div>
 
 </body>
 
 <script>
-//Canvas
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-fps = 30,
-setInterval(drawGrid, 1000 / fps);
-
+	
 //Variables
 var canvasx = $(canvas).offset().left;
 var canvasy = $(canvas).offset().top;
@@ -36,7 +31,6 @@ var last_mousex = last_mousey = 0;
 var mousex = mousey = 0;
 var mousedown = false;
 
-ctx.font = "30px Ubuntu Mono";
 
 // Positioning data
 
@@ -66,6 +60,21 @@ BAWEJBPQRXFA\
 ICGEYESSPYQS\
 TPFORELEGEZJ";
 
+
+$( document ).ready(function() {
+	prepareCanvas();
+	drawGrid();
+});
+
+function prepareCanvas() {
+//Canvas
+var canvas = document.getElementById('canvas');
+ctx = canvas.getContext('2d');
+ctx.font='30px Courier New';
+
+
+}
+
 function drawGrid() {
 	// Draws a grid of letters
 
@@ -74,16 +83,16 @@ function drawGrid() {
 		  xRenderLetter += xPadding;
 		  columnCount += 1;
 		  // When columns created = maxColumns, create a new row
-		  if(columnCount > 11){
+		  if(columnCount > maxColumns){
 			  columnCount = 1;
 			  yRenderLetter += yPadding;
 			  xRenderLetter = xPadding;
 		  }
 	}
-
+	xRenderLetter = xPadding;
+	yRenderLetter = yPadding;	
+	columnCount = 1;
 }
-
-//drawGrid();
 
 //Mousedown
 $(canvas).on('mousedown', function(e) {
@@ -118,8 +127,6 @@ $(canvas).on('mousemove', function(e) {
 
 
 //ctx.fillText(letterString, 10, 50);
-
-
 </script>
 
 </html>
