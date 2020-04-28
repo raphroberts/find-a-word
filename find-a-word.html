@@ -9,6 +9,9 @@
 }
 
 </style>
+
+<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
 </head>
@@ -20,15 +23,67 @@
 </body>
 
 <script>
-	//Canvas
+//Canvas
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
+fps = 30,
+setInterval(drawGrid, 1000 / fps);
+
 //Variables
 var canvasx = $(canvas).offset().left;
 var canvasy = $(canvas).offset().top;
 var last_mousex = last_mousey = 0;
 var mousex = mousey = 0;
 var mousedown = false;
+
+ctx.font = "30px Ubuntu Mono";
+
+// Positioning data
+
+var xPadding = 30;
+var yPadding = 30;
+var xRenderLetter = xPadding;
+var yRenderLetter = yPadding;
+
+// Rendering data
+
+var columnCount = 1;
+var maxColumns = 12;
+
+var letterString = "\
+NASTRAPHTUOM\
+SGNIWLIDAEMW\
+WHJVAGBUOJBJ\
+EJIDPJIUASVE\
+FEANNETNBASA\
+EERTDHLNMOHN\
+HLVUPLEDUTPN\
+BQCAMMEMTHAE\
+YPRAOEIGOOFT\
+ATHDRDFKNRTN\
+IMBKLIBUOAGA\
+BAWEJBPQRXFA\
+ICGEYESSPYQS\
+TPFORELEGEZJ";
+
+function drawGrid() {
+	// Draws a grid of letters
+
+	for (var i = 0; i < letterString.length; i++) {
+		  ctx.fillText(letterString.charAt(i), xRenderLetter, yRenderLetter);
+		  xRenderLetter += xPadding;
+		  columnCount += 1;
+		  // When columns created = maxColumns, create a new row
+		  if(columnCount > 11){
+			  columnCount = 1;
+			  yRenderLetter += yPadding;
+			  xRenderLetter = xPadding;
+		  }
+	}
+
+}
+
+//drawGrid();
 
 //Mousedown
 $(canvas).on('mousedown', function(e) {
@@ -48,6 +103,7 @@ $(canvas).on('mousemove', function(e) {
 	mousey = parseInt(e.clientY-canvasy);
     if(mousedown) {
         ctx.clearRect(0,0,canvas.width,canvas.height); //clear canvas
+        drawGrid();
         ctx.beginPath();
         ctx.moveTo(last_mousex,last_mousey);
         ctx.lineTo(mousex,mousey);
@@ -59,6 +115,11 @@ $(canvas).on('mousemove', function(e) {
     //Output
     $('#output').html('current: '+mousex+', '+mousey+'<br/>last: '+last_mousex+', '+last_mousey+'<br/>mousedown: '+mousedown);
 });
+
+
+//ctx.fillText(letterString, 10, 50);
+
+
 </script>
 
 </html>
