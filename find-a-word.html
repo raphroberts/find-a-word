@@ -40,6 +40,9 @@ var wordList = [
 	[309,202,309,351,'thorax']	
 ];
 
+// Array for storing previous words that are found
+var previousLines = [];
+
 // Positioning data
 
 var xPadding = 30;
@@ -82,12 +85,10 @@ function prepareCanvas() {
 var canvas = document.getElementById('canvas');
 ctx = canvas.getContext('2d');
 ctx.font='30px Courier New';
-
 }
 
 function drawGrid() {
 	// Draws a grid of letters
-
 	for (var i = 0; i < letterString.length; i++) {
 		ctx.lineWidth = 1;
 		ctx.strokeStyle = "#accddd";
@@ -110,6 +111,20 @@ function drawGrid() {
 	columnCount = 1;
 }
 
+function drawPreviousLines(){
+	// Draws the lines from previously found words
+
+	for (var i = 0; i < previousLines.length; i++) {
+		ctx.strokeStyle = 'rgba(0,0,255,0.5)';
+		ctx.lineWidth = 20;
+        ctx.lineJoin = ctx.lineCap = 'round';
+        ctx.beginPath();
+		ctx.moveTo(previousLines[i][0],previousLines[i][1]);
+        ctx.lineTo(previousLines[i][2],previousLines[i][3]);
+        ctx.stroke();
+	}
+}
+
 function checkFirstLetters(){
     // loop through wordList start coordinates and compare them to last_mousex
 	// If the distance is < gridSquareSize, match found
@@ -124,13 +139,13 @@ function checkFirstLetters(){
 		
 		// If distance of first letter is within the threshold, check the second letter
 		if (distance < gridSquareSize){
-			checkSecondLetter(i);
+			checkSecondLetter(i,startX,startY);
 		}
 	}
 		
 }
 
-function checkSecondLetter(wordListIndex) {
+function checkSecondLetter(wordListIndex,startX,startY) {
 	// Check distance between current selection and last letter's location < gridSquareSize
 	endX = wordList[wordListIndex][2];
 	endY = wordList[wordListIndex][3];
@@ -142,6 +157,9 @@ function checkSecondLetter(wordListIndex) {
 	// If distance of second letter is within threshold, a word is found
 	if (distance < gridSquareSize){
 		alert("Word found: " + wordList[wordListIndex][4]);
+		
+		// Save the line data to previousLines array
+		previousLines.push([startX,startY,mousex,mousey])
 	}		
 }
 
@@ -166,20 +184,20 @@ $(canvas).on('mousemove', function(e) {
     if(mousedown) {
         ctx.clearRect(0,0,canvas.width,canvas.height); //clear canvas
         drawGrid();
+        drawPreviousLines();
         ctx.beginPath();
         ctx.moveTo(last_mousex,last_mousey);
         ctx.lineTo(mousex,mousey);
-        ctx.strokeStyle = 'rgba(255,0,0,0.8)';
-        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'rgba(255,0,0,0.5)';
+        ctx.lineWidth = 20;
         ctx.lineJoin = ctx.lineCap = 'round';
         ctx.stroke();
     }
-    //Output
-    $('#output').html('current: '+mousex+', '+mousey+'<br/>last: '+last_mousex+', '+last_mousey+'<br/>mousedown: '+mousedown);
+	//Output
+	$('#output').html('current: '+mousex+', '+mousey+'<br/>last: '+last_mousex+', '+last_mousey+'<br/>mousedown: '+mousedown);
 });
 
 
-//ctx.fillText(letterString, 10, 50);
 </script>
 
 </html>
