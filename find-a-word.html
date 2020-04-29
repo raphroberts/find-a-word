@@ -3,10 +3,11 @@
 <head>
 <style>
 	
-	canvas {
+canvas {
     cursor: crosshair;
-    border: 1px solid #000000;
+    border: 0px none black;
 }
+
 
 </style>
 
@@ -16,7 +17,7 @@
 
 </head>
 <body>
-
+<p> Find the words "foreleg", "head", and "thorax" </p>
 <canvas id="canvas" width="410" height="430"></canvas>
 <div id="output"></div>
 
@@ -31,6 +32,13 @@ var last_mousex = last_mousey = 0;
 var mousex = mousey = 0;
 var mousedown = false;
 
+// Wordlist data
+// 0,1 = X/Y start letter, 2,3 = X/Y end letter, 4 = word
+var wordList = [
+	[102,410,280,410,'foreleg'],
+	[39,200,131,111,'head'],
+	[309,202,309,351,'thorax']	
+];
 
 // Positioning data
 
@@ -38,6 +46,9 @@ var xPadding = 30;
 var yPadding = 30;
 var xRenderLetter = xPadding;
 var yRenderLetter = yPadding;
+
+var gridSquareSize = 30;
+var gridSquareOffset = 5;
 
 // Rendering data
 
@@ -72,26 +83,66 @@ var canvas = document.getElementById('canvas');
 ctx = canvas.getContext('2d');
 ctx.font='30px Courier New';
 
-
 }
 
 function drawGrid() {
 	// Draws a grid of letters
 
 	for (var i = 0; i < letterString.length; i++) {
-		  ctx.fillText(letterString.charAt(i), xRenderLetter, yRenderLetter);
-		  xRenderLetter += xPadding;
-		  columnCount += 1;
-		  // When columns created = maxColumns, create a new row
-		  if(columnCount > maxColumns){
-			  columnCount = 1;
-			  yRenderLetter += yPadding;
-			  xRenderLetter = xPadding;
-		  }
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = "#accddd";
+		ctx.beginPath();
+		ctx.rect(gridSquareSize - gridSquareOffset, 0 + gridSquareOffset, xRenderLetter, yRenderLetter);
+		ctx.stroke();
+		ctx.fillText(letterString.charAt(i), xRenderLetter, yRenderLetter);
+		xRenderLetter += xPadding;
+		columnCount += 1;
+		
+		// When columns created = maxColumns, create a new row
+		if(columnCount > maxColumns){
+			columnCount = 1;
+			yRenderLetter += yPadding;
+			xRenderLetter = xPadding;
+		}
 	}
 	xRenderLetter = xPadding;
 	yRenderLetter = yPadding;	
 	columnCount = 1;
+}
+
+function checkFirstLetters(){
+    // loop through wordList start coordinates and compare them to last_mousex
+	// If the distance is < gridSquareSize, match found
+	
+	for (var i = 0; i < wordList.length; i++) {
+		startX = wordList[i][0];
+		startY = wordList[i][1];
+		distanceX = startX - last_mousex;
+		distanceY = startY - last_mousey;
+		distance = Math.sqrt( distanceX*distanceX + distanceY*distanceY );
+		console.log("Distance between selection and first letter is " + distance);
+		
+		// If distance of first letter is within the threshold, check the second letter
+		if (distance < gridSquareSize){
+			checkSecondLetter(i);
+		}
+	}
+		
+}
+
+function checkSecondLetter(wordListIndex) {
+	// Check distance between current selection and last letter's location < gridSquareSize
+	endX = wordList[wordListIndex][2];
+	endY = wordList[wordListIndex][3];
+	distanceX = endX - mousex;
+	distanceY = endY - mousey;
+	distance = Math.sqrt( distanceX*distanceX + distanceY*distanceY );
+	console.log("Distance between selection and last letter is " + distance);
+	
+	// If distance of second letter is within threshold, a word is found
+	if (distance < gridSquareSize){
+		alert("Word found: " + wordList[wordListIndex][4]);
+	}		
 }
 
 //Mousedown
@@ -99,11 +150,13 @@ $(canvas).on('mousedown', function(e) {
     last_mousex = parseInt(e.clientX-canvasx);
 	last_mousey = parseInt(e.clientY-canvasy);
     mousedown = true;
+    
 });
 
 //Mouseup
 $(canvas).on('mouseup', function(e) {
     mousedown = false;
+	checkFirstLetters();	
 });
 
 //Mousemove
@@ -116,7 +169,7 @@ $(canvas).on('mousemove', function(e) {
         ctx.beginPath();
         ctx.moveTo(last_mousex,last_mousey);
         ctx.lineTo(mousex,mousey);
-        ctx.strokeStyle = 'black';
+        ctx.strokeStyle = 'rgba(255,0,0,0.8)';
         ctx.lineWidth = 10;
         ctx.lineJoin = ctx.lineCap = 'round';
         ctx.stroke();
