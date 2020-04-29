@@ -1,2 +1,2 @@
 # find-a-word
-A simple find-a-word game
+A simple find-a-word game, using HTML canvas
