@@ -8,7 +8,8 @@
 	}
 	</style>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">
+	</script>
 </head>
 
 <body>
@@ -126,7 +127,7 @@ function drawPreviousLines(){
 	}
 }
 
-function drawCurrentLine(){
+function drawCurrentLine(e){
 	// Draws a line from previous mousedown to current mouse position
 	
 	// Get current mouse position (end point of the line)
@@ -213,7 +214,7 @@ $(canvas).on('mousemove', function(e) {
         // Draw the grid, previous line, and the line currently being drawn
         drawGrid();
         drawPreviousLines();
-        drawCurrentLine();
+        drawCurrentLine(e);
     }
 	//Output
 	$('#output').html('current: '+mousex+', '+mousey+'<br/>last: '+last_mousex+', '+last_mousey+'<br/>mousedown: '+mousedown);
