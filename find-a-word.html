@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-	
-canvas {
-    cursor: crosshair;
-    border: 0px none black;
-}
-
-
-</style>
-
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-
+	<style>	
+	canvas {
+	    cursor: crosshair;
+	    border: 0px none black;
+	}
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 </head>
-<body>
-<p> Find the words "foreleg", "head", and "thorax" </p>
-<canvas id="canvas" width="410" height="430"></canvas>
-<div id="output"></div>
 
+<body>
+	<p> Find the words "foreleg", "head", and "thorax" </p>
+	<canvas id="canvas" width="410" height="430"></canvas>
+	<div id="output"></div>
 </body>
 
 <script>
 	
 //Variables
+
 var canvasx = $(canvas).offset().left;
 var canvasy = $(canvas).offset().top;
 var last_mousex = last_mousey = 0;
@@ -34,29 +29,14 @@ var mousedown = false;
 
 // Wordlist data
 // 0,1 = X/Y start letter, 2,3 = X/Y end letter, 4 = word
+
 var wordList = [
 	[102,410,280,410,'foreleg'],
 	[39,200,131,111,'head'],
 	[309,202,309,351,'thorax']	
 ];
 
-// Array for storing previous words that are found
-var previousLines = [];
-
-// Positioning data
-
-var xPadding = 30;
-var yPadding = 30;
-var xRenderLetter = xPadding;
-var yRenderLetter = yPadding;
-
-var gridSquareSize = 30;
-var gridSquareOffset = 5;
-
-// Rendering data
-
-var columnCount = 1;
-var maxColumns = 12;
+// Grid of letters
 
 var letterString = "\
 NASTRAPHTUOM\
@@ -74,6 +54,25 @@ BAWEJBPQRXFA\
 ICGEYESSPYQS\
 TPFORELEGEZJ";
 
+// Array for storing previous words that are found
+
+var previousLines = [];
+
+// Positioning data for grid rendering
+
+var xPadding = 30;
+var yPadding = 30;
+var xRenderLetter = xPadding;
+var yRenderLetter = yPadding;
+var gridSquareSize = 30;
+var gridSquareOffset = 5;
+
+// Count data for grid rendering
+
+var columnCount = 1;
+var maxColumns = 12;
+
+// Initial render
 
 $( document ).ready(function() {
 	prepareCanvas();
@@ -81,14 +80,16 @@ $( document ).ready(function() {
 });
 
 function prepareCanvas() {
-//Canvas
-var canvas = document.getElementById('canvas');
-ctx = canvas.getContext('2d');
-ctx.font='30px Courier New';
+	//Prepares the HTML canvas
+	
+	var canvas = document.getElementById('canvas');
+	ctx = canvas.getContext('2d');
+	ctx.font='30px Courier New';
 }
 
 function drawGrid() {
-	// Draws a grid of letters
+	// Draws the grid of letters
+	
 	for (var i = 0; i < letterString.length; i++) {
 		ctx.lineWidth = 1;
 		ctx.strokeStyle = "#accddd";
@@ -125,6 +126,23 @@ function drawPreviousLines(){
 	}
 }
 
+function drawCurrentLine(){
+	// Draws a line from previous mousedown to current mouse position
+	
+	// Get current mouse position (end point of the line)
+    mousex = parseInt(e.clientX-canvasx);
+	mousey = parseInt(e.clientY-canvasy);
+	
+	// Draw a line from previously stored position to current position
+	ctx.beginPath();
+    ctx.moveTo(last_mousex,last_mousey);
+    ctx.lineTo(mousex,mousey);
+    ctx.strokeStyle = 'rgba(255,0,0,0.5)';
+    ctx.lineWidth = 20;
+    ctx.lineJoin = ctx.lineCap = 'round';
+    ctx.stroke();
+}
+
 function checkFirstLetters(){
     // loop through wordList start coordinates and compare them to last_mousex
 	// If the distance is < gridSquareSize, match found
@@ -147,6 +165,7 @@ function checkFirstLetters(){
 
 function checkSecondLetter(wordListIndex,startX,startY) {
 	// Check distance between current selection and last letter's location < gridSquareSize
+	
 	endX = wordList[wordListIndex][2];
 	endY = wordList[wordListIndex][3];
 	distanceX = endX - mousex;
@@ -164,7 +183,10 @@ function checkSecondLetter(wordListIndex,startX,startY) {
 }
 
 //Mousedown
+
 $(canvas).on('mousedown', function(e) {
+	// Save the mouse position and register the mouse event
+	
     last_mousex = parseInt(e.clientX-canvasx);
 	last_mousey = parseInt(e.clientY-canvasy);
     mousedown = true;
@@ -172,26 +194,26 @@ $(canvas).on('mousedown', function(e) {
 });
 
 //Mouseup
+
 $(canvas).on('mouseup', function(e) {
+	// Register the mouse up and start checking for a match
+	
     mousedown = false;
 	checkFirstLetters();	
 });
 
 //Mousemove
+
 $(canvas).on('mousemove', function(e) {
-    mousex = parseInt(e.clientX-canvasx);
-	mousey = parseInt(e.clientY-canvasy);
+	// Continuously Redraw the grid, previous lines, and current line
+	
     if(mousedown) {
-        ctx.clearRect(0,0,canvas.width,canvas.height); //clear canvas
+	    // Clear the canvas
+        ctx.clearRect(0,0,canvas.width,canvas.height); 
+        // Draw the grid, previous line, and the line currently being drawn
         drawGrid();
         drawPreviousLines();
-        ctx.beginPath();
-        ctx.moveTo(last_mousex,last_mousey);
-        ctx.lineTo(mousex,mousey);
-        ctx.strokeStyle = 'rgba(255,0,0,0.5)';
-        ctx.lineWidth = 20;
-        ctx.lineJoin = ctx.lineCap = 'round';
-        ctx.stroke();
+        drawCurrentLine();
     }
 	//Output
 	$('#output').html('current: '+mousex+', '+mousey+'<br/>last: '+last_mousex+', '+last_mousey+'<br/>mousedown: '+mousedown);
