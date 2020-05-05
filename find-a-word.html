@@ -165,7 +165,10 @@ function drawWordList(){
     // loop through wordlist, check if each word has been found and render accordingly
     var wordListString = "";
     for (var i = 0; i < wordList.length; i++) {
-            wordListString += "<p>" + wordList[i][4] + "</p>";
+            wordListString += "<div class='wordlist-item' id='" + wordList[i][4] + "'>";
+            wordListString += "<span class='hover' style='background-color:rgba(" + wordList[i][5] + ")'></span>";
+            wordListString += wordList[i][4]
+            wordListString += "</div>";
     }
     var para = document.getElementById('wordlist');
     para.innerHTML = wordListString;
@@ -207,7 +210,7 @@ function checkSecondLetter(wordListIndex,startX,startY) {
 		// Save the line data to previousLines array
 		previousLines.push([startX,startY,mousex,mousey,wordList[wordListIndex][5]]);
 		wordList[wordListIndex][4] = "<del>" + wordList[wordListIndex][4] + "</del>";
-		drawWordList();
+		// TRIGGER CSS CHANGE
 	}
 	
 }
