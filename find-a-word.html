@@ -6,6 +6,17 @@
 	    cursor: crosshair;
 	    border: 0px none black;
 	}
+	.row {
+          display: flex;
+    }
+    
+    .column {
+          flex: 50%;
+    }
+    
+    #wordlist p {
+        text-align: center;
+    }
 	</style>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">
@@ -13,8 +24,12 @@
 </head>
 
 <body>
-	<p> Find the words "foreleg", "head", and "thorax" </p>
-	<canvas id="canvas" width="410" height="430"></canvas>
+	<div class="row">
+        <div class="column" id="wordlist">
+            <div id="wordlist"></div>
+        </div>
+      <div class="column"><canvas id="canvas" width="410" height="430"></canvas></div>
+    </div>
 	<div id="output"></div>
 </body>
 
@@ -32,7 +47,7 @@ var mousedown = false;
 // 0,1 = X/Y start letter, 2,3 = X/Y end letter, 4 = word, 5=colour
 
 var wordList = [
-	[102,410,280,410,'foreleg','255,0,0,0.5'],
+	[102,410,280,410,'foreleg','0,255,255,0.5'],
 	[39,200,131,111,'head','0,255,0,0.5'],
 	[309,202,309,351,'thorax','0,0,255,0.5']	
 ];
@@ -78,6 +93,7 @@ var maxColumns = 12;
 $( document ).ready(function() {
 	prepareCanvas();
 	drawGrid();
+	drawWordList();
 });
 
 function prepareCanvas() {
@@ -144,6 +160,17 @@ function drawCurrentLine(e){
     ctx.stroke();
 }
 
+function drawWordList(){
+    var para = document.getElementById('wordlist');
+    // loop through wordlist, check if each word has been found and render accordingly
+    var wordListString = "";
+    for (var i = 0; i < wordList.length; i++) {
+            wordListString += "<p>" + wordList[i][4] + "</p>";
+    }
+    var para = document.getElementById('wordlist');
+    para.innerHTML = wordListString;
+}
+
 function checkFirstLetters(){
     // loop through wordList start coordinates and compare them to last_mousex
 	// If the distance is < gridSquareSize, match found
@@ -176,11 +203,13 @@ function checkSecondLetter(wordListIndex,startX,startY) {
 	
 	// If distance of second letter is within threshold, a word is found
 	if (distance < gridSquareSize){
-		alert("Word found: " + wordList[wordListIndex][4]);
 		
 		// Save the line data to previousLines array
-		previousLines.push([startX,startY,mousex,mousey,wordList[wordListIndex][5]])
-	}		
+		previousLines.push([startX,startY,mousex,mousey,wordList[wordListIndex][5]]);
+		wordList[wordListIndex][4] = "<del>" + wordList[wordListIndex][4] + "</del>";
+		drawWordList();
+	}
+	
 }
 
 //Mousedown
