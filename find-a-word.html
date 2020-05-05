@@ -29,12 +29,12 @@ var mousex = mousey = 0;
 var mousedown = false;
 
 // Wordlist data
-// 0,1 = X/Y start letter, 2,3 = X/Y end letter, 4 = word
+// 0,1 = X/Y start letter, 2,3 = X/Y end letter, 4 = word, 5=colour
 
 var wordList = [
-	[102,410,280,410,'foreleg'],
-	[39,200,131,111,'head'],
-	[309,202,309,351,'thorax']	
+	[102,410,280,410,'foreleg','255,0,0,0.5'],
+	[39,200,131,111,'head','0,255,0,0.5'],
+	[309,202,309,351,'thorax','0,0,255,0.5']	
 ];
 
 // Grid of letters
@@ -117,7 +117,7 @@ function drawPreviousLines(){
 	// Draws the lines from previously found words
 
 	for (var i = 0; i < previousLines.length; i++) {
-		ctx.strokeStyle = 'rgba(0,0,255,0.5)';
+		ctx.strokeStyle = "rgba(" + previousLines[i][4] +")";
 		ctx.lineWidth = 20;
         ctx.lineJoin = ctx.lineCap = 'round';
         ctx.beginPath();
@@ -179,7 +179,7 @@ function checkSecondLetter(wordListIndex,startX,startY) {
 		alert("Word found: " + wordList[wordListIndex][4]);
 		
 		// Save the line data to previousLines array
-		previousLines.push([startX,startY,mousex,mousey])
+		previousLines.push([startX,startY,mousex,mousey,wordList[wordListIndex][5]])
 	}		
 }
 
