@@ -1,36 +1,42 @@
 canvas {
     cursor: crosshair;
     border: 0px none black;
+    float:left;
 }
 
 .row {
     display: flex;
+    justify-content: center;
 }
 
 .column {
-    flex: 50%;
+
 }
+
+#wrap{
+
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+}
+
+/* Word list + animations */
 
 #wordlist p {
     text-align: center;
 }
 
-#wrapper {
-    width: 600px;
-    margin: auto;
-    border: 2px solid red;
-}
-
-/* NEW CSS */
 #wordlist {
     padding: 15px;
     display: block;
     border: 2px solid #accddd;
     background: #e8f1f6;
     max-width: 200px;
-    margin: 0 auto 7px;
     font-family: Roboto Mono;
     text-transform: capitalize;
+    float: right;
 }
 
 #wordlist .wordlist-item {

@@ -1,7 +1,7 @@
 //Variables
 
-var canvasx = $(canvas).offset().left;
-var canvasy = $(canvas).offset().top;
+var canvasx = 0;
+var canvasy = 0;
 var last_mousex = last_mousey = 0;
 var mousex = mousey = 0;
 var mousedown = false;
@@ -32,7 +32,6 @@ $(document).ready(function () {
 
 function prepareCanvas() {
     //Prepares the HTML canvas
-
     var canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
     ctx.font = '28px Roboto Mono';
@@ -40,7 +39,6 @@ function prepareCanvas() {
 
 function drawGrid() {
     // Draws the grid of letters
-
     for (var i = 0; i < letterString.length; i++) {
         ctx.lineWidth = 1;
         ctx.strokeStyle = "#accddd";
@@ -146,8 +144,9 @@ function checkSecondLetter(wordListIndex, startX, startY) {
         //wordList[wordListIndex][4] = "<del>" + wordList[wordListIndex][4] + "</del>";
         // TRIGGER CSS CHANGE
         $('#' + wordList[wordListIndex][4]).toggleClass('complete');
-        redrawGame();
-
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawGrid();
+        drawPreviousLines();
     }
 }
 
@@ -164,11 +163,12 @@ function redrawGame(e) {
 
 $(canvas).on('mousedown', function (e) {
     // Save the mouse position and register the mouse event
-
-    last_mousex = parseInt(e.clientX - canvasx);
-    last_mousey = parseInt(e.clientY - canvasy);
+    //Update the canvas offset.
+    canvasx = $(canvas).offset().left;
+    canvasy = $(canvas).offset().top;
+    last_mousex = parseInt(e.pageX - canvasx);
+    last_mousey = parseInt(e.pageY - canvasy);
     mousedown = true;
-
 });
 
 //Mouseup
