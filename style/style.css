@@ -15,6 +15,12 @@ canvas {
     text-align: center;
 }
 
+#wrapper {
+    width: 600px;
+    margin: auto;
+    border: 2px solid red;
+}
+
 /* NEW CSS */
 #wordlist {
     padding: 15px;
