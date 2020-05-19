@@ -1,7 +1,6 @@
 canvas {
     cursor: crosshair;
     border: 0px none black;
-    float:left;
 }
 
 .row {
@@ -13,21 +12,11 @@ canvas {
 
 }
 
-#wrap{
-
-}
-
-.banner {
-    width: 100%;
-    height: auto;
-}
-
-/* Word list + animations */
-
 #wordlist p {
     text-align: center;
 }
 
+/* NEW CSS */
 #wordlist {
     padding: 15px;
     display: block;
@@ -36,7 +25,6 @@ canvas {
     max-width: 200px;
     font-family: Roboto Mono;
     text-transform: capitalize;
-    float: right;
 }
 
 #wordlist .wordlist-item {
