@@ -6,10 +6,11 @@ canvas {
 
 .row {
     display: flex;
+    justify-content: center;
 }
 
 .column {
-    flex: 50%;
+
 }
 
 #wrap{
@@ -33,7 +34,6 @@ canvas {
     border: 2px solid #accddd;
     background: #e8f1f6;
     max-width: 200px;
-    margin: 0 auto 7px;
     font-family: Roboto Mono;
     text-transform: capitalize;
     float: right;
