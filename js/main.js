@@ -5,7 +5,7 @@ var canvasy = 0;
 var last_mousex = last_mousey = 0;
 var mousex = mousey = 0;
 var mousedown = false;
-
+var ctx;
 // Enable author mode to create word data array code
 // Words data array contains position and colour information
 
@@ -56,7 +56,7 @@ function prepareCanvas() {
     //Prepares the HTML canvas
     var canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
-    ctx.font = '28px Roboto Mono';
+    ctx.font = '28px Roboto Mono, monospace';
 }
 
 function drawGrid() {
@@ -99,10 +99,13 @@ function drawPreviousLines() {
 
 function drawCurrentLine(e) {
     // Draws a line from previous mousedown to current mouse position
-
+    
+    var x = e.pageX ? e.pageX : e.clientX;
+    var y= e.pageY ? e.pageY : e.clientY;
+    
     // Get current mouse position (end point of the line)
-    mousex = parseInt(e.clientX - canvasx);
-    mousey = parseInt(e.clientY - canvasy);
+    mousex = parseInt(x - canvasx);
+    mousey = parseInt(y - canvasy);
 
     // Draw a line from previously stored position to current position
     ctx.beginPath();
