@@ -44,19 +44,30 @@ var gridSquareOffset = 5;
 // Count data for grid rendering
 var columnCount = 1;
 
-// Initial render
+var roboto_font = new FontFace("Roboto Mono", "url(font/RobotoMono-Regular.ttf)");
 
-$(document).ready(function () {
-    prepareCanvas();
-    drawGrid();
-    drawWordList();
+// Initial render
+$(document).ready(function () {  
+
+    roboto_font.load().then(function(loaded_face) {
+        document.fonts.add(loaded_face);
+        
+        // Font loaded, do the things.
+        prepareCanvas();
+        drawGrid();
+        drawWordList();
+        
+    }).catch(function(error) {
+        // error occurred
+        console.log(error);
+    });    
 });
 
 function prepareCanvas() {
     //Prepares the HTML canvas
     var canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
-    ctx.font = '28px Roboto Mono, monospace';
+    ctx.font = '28px Roboto Mono';
 }
 
 function drawGrid() {
