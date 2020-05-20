@@ -6,6 +6,28 @@ var last_mousex = last_mousey = 0;
 var mousex = mousey = 0;
 var mousedown = false;
 
+// Enable author mode to create word data array code
+// Words data array contains position and colour information
+
+var authormode = true;
+var colourCounter = 0;
+
+if(authormode){
+    var colours = [
+        '0,255,255,0.5',
+        '0,255,36,0.5',
+        '255,182,0,0.5',
+        '255,0,237,0.5',
+        '182,221,217,0.5',
+        '41,171,226,0.5',
+        '245,157,189,0.5',
+        '148,237,100,0.5',
+        '100,176,237,0.5',
+        '237,100,189,0.5',
+        '198,198,161,0.5 '
+    ];
+}
+
 // Array for storing previous words that are found
 
 var previousLines = [];
@@ -138,7 +160,8 @@ function checkSecondLetter(wordListIndex, startX, startY) {
 
     // If distance of second letter is within threshold, a word is found
     if (distance < gridSquareSize) {
-
+        // Trigger tumult hype animation
+        HYPE.documents['banner'].functions().sparkle(HYPE.documents['banner'],'foo',event);
         // Save the line data to previousLines array
         previousLines.push([startX, startY, mousex, mousey, wordList[wordListIndex][5]]);
         //wordList[wordListIndex][4] = "<del>" + wordList[wordListIndex][4] + "</del>";
@@ -180,14 +203,24 @@ $(canvas).on('mouseup', function (e) {
     checkFirstLetters();
 });
 
-//Mousemove
+//Mouseup
+$(canvas).on('mouseup', function (e) {
+    colourCounter ++;
+    if (colourCounter > colours.length){
+        colourCounter = 0;
+    }
+});
 
+//Mousemove
 $(canvas).on('mousemove', function (e) {
     // Continuously Redraw the grid, previous lines, and current line
 
     if (mousedown) {
         redrawGame(e);
     }
-    //Output
-    $('#output').html('current: ' + mousex + ', ' + mousey + '<br/>last: ' + last_mousex + ', ' + last_mousey + '<br/>mousedown: ' + mousedown);
+
+    // Create word array data if author mode is active
+    if(authormode) {
+        $('#output').html("[" + last_mousex + ", " + last_mousey + ", " + mousex + ", " + mousey + ", 'word', '" + colours[colourCounter] + "'],");
+    }
 });

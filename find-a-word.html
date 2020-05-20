@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="english">
 <head>
+	<script src="js/hype-responsive-height.js"></script>
 	<link href="style/style.css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">
 	</script>
 	<title>Find-a-word</title>
+	<meta name="viewport" content="user-scalable=yes, width=600" />
 </head>
 
 <body>
-<img src="banner.png" class="banner" alt="banner">
+	<div id="banner_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;max-height:150px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="banner.hyperesources/banner_hype_generated_script.js?93338"></script>
+	</div>
 	<div id="wrap">
 		<div class="row">
 			<div class="column" id="wordlist">
 				<div></div>
 			</div>
-		  <div class="column"><canvas id="canvas" width="410" height="430"></canvas></div>
+			<div class="column"><canvas id="canvas" width="450" height="430"></canvas></div>
 		</div>
 		<div id="output"></div>
 	</div>
+
+
 </body>
 
 <!-- Data source -->
-<script src="js/data-insect-body-parts.js"></script>
+<!--<script src="js/data-insect-body-parts.js"></script>-->
+<!--<script src="js/data-creative-chemistry.js"></script>-->
+<script src="js/data-dynamic-bodies.js"></script>
+<!--<script src="js/data-school-of-ants.js"></script>-->
 <!-- Main JS -->
 <script src="js/main.js"></script>
 
