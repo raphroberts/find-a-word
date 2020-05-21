@@ -142,7 +142,7 @@ function drawWordList() {
         var $wlitem =  $("<div>").addClass("wordlist-item");
 
         $wlitem.attr('id', wordList[i][4]).append(
-            $highlightspan.addClass("highlight").css("background-color", wordList[i][5]))
+            $highlightspan.addClass("highlight").css("background-color", "rgba(" + wordList[i][5] + ")"))
             .append($textspan.addClass("text").text(wordList[i][4]));
 
         let $item = $col.append($wlitem);
