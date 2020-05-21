@@ -9,12 +9,39 @@ canvas {
     float:left;
 }
 
-.row {
+/* Word list + animations */
+
+#wordlist .wlrow {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-/* Word list + animations */
+#wordlist .wlcolumn {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin: 5px;
+    min-width: 40%;
+}
+
+.row {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column1 {
+    flex: 1;
+}
+
+.column2 {
+    width: 450px;
+}
+
 
 #wordlist p {
     text-align: center;
@@ -28,9 +55,11 @@ canvas {
     font-family: Roboto Mono;
     text-transform: capitalize;
     float: left;
+    max-width: 350px;
+    width: 100%;
 }
 
-#col .wordlist-item {
+#wordlist .wordlist-item {
     position: relative;
     display: block;
     padding: 5px;
@@ -40,13 +69,13 @@ canvas {
     border-radius: 4px;
 }
 
-#col .wordlist-item span.text {
+#wordlist .wordlist-item span.text {
     display: inline-block;
     position: relative;
     z-index: 2;
 }
 
-#col .wordlist-item span.text:after {
+#wordlist .wordlist-item span.text:after {
     content: '';
     height: 2px;
     width: 100%;
@@ -62,7 +91,7 @@ canvas {
     transition: transform 0.3s 0.5s;
 }
 
-#col .wordlist-item span.highlight {
+#wordlist .wordlist-item span.highlight {
     position: absolute;
     z-index: 1;
     display: block;
@@ -77,11 +106,11 @@ canvas {
     transition-timing-function: cubic-bezier(0.65, 1.95, 0.02, 0.32);
 }
 
-#col .wordlist-item.complete span.text:after {
+#wordlist .wordlist-item.complete span.text:after {
     transform: scale(1);
 }
 
-#col .wordlist-item.complete span.highlight {
+#wordlist .wordlist-item.complete span.highlight {
     transform: scaleX(1);
     opacity: 1;
 }
@@ -92,13 +121,15 @@ canvas {
     padding: 2px;
 }
 
-@media only screen and (max-width: 600px) {
-
-    .row{
-        display:block;
+@media screen and (min-width: 840px) {
+    #wordlist .wlcolumn {
+        flex: 1;
     }
-    .column{
-        display: block !important;
-        margin: 0px auto !important;
+}
+
+@media screen and (max-width: 640px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
     }
 }

@@ -47,20 +47,19 @@ var columnCount = 1;
 var roboto_font = new FontFace("Roboto Mono", "url(font/RobotoMono-Regular.ttf)");
 
 // Initial render
-$(document).ready(function () {  
-
+$(document).ready(function () {
     roboto_font.load().then(function(loaded_face) {
         document.fonts.add(loaded_face);
-        
+
         // Font loaded, do the things.
         prepareCanvas();
         drawGrid();
         drawWordList();
-        
+
     }).catch(function(error) {
         // error occurred
         console.log(error);
-    });    
+    });
 });
 
 function prepareCanvas() {
@@ -110,10 +109,10 @@ function drawPreviousLines() {
 
 function drawCurrentLine(e) {
     // Draws a line from previous mousedown to current mouse position
-    
+
     var x = e.pageX ? e.pageX : e.clientX;
     var y= e.pageY ? e.pageY : e.clientY;
-    
+
     // Get current mouse position (end point of the line)
     mousex = parseInt(x - canvasx);
     mousey = parseInt(y - canvasy);
@@ -129,22 +128,32 @@ function drawCurrentLine(e) {
 }
 
 function drawWordList() {
-    var para = document.getElementById('wordlist');
     // loop through wordlist, check if each word has been found and render accordingly
-    var wordListString = "<div id='col'>";
-    var columnBreak = parseInt(wordList.length / 2);
+    var $para = $("#wordlist");
+    var $currentRow = $("<div>").addClass("wlrow");
+    var $wordList = $("<div>").addClass("col");
+
     for (var i = 0; i < wordList.length; i++) {
-        wordListString += "<div class='wordlist-item' id='" + wordList[i][4] + "'>";
-        wordListString += "<span class='highlight' style='background-color:rgba(" + wordList[i][5] + ")'></span>";
-        wordListString += "<span class='text'>" + wordList[i][4] + "</span>"
-        wordListString += "</div>";
-        if (i == columnBreak){
-            wordListString += "</div><div id='col'>";
+
+        var $row = $("<div>").addClass("wlrow");
+        var $col = $("<div>").addClass("wlcolumn");
+        var $highlightspan = $("<span>");
+        var $textspan = $("<span>");
+        var $wlitem =  $("<div>").addClass("wordlist-item");
+
+        $wlitem.attr('id', wordList[i][4]).append(
+            $highlightspan.addClass("highlight").css("background-color", wordList[i][5]))
+            .append($textspan.addClass("text").text(wordList[i][4]));
+
+        let $item = $col.append($wlitem);
+        $currentRow.append($item);
+        $para.append($currentRow.append($col));
+
+        // If even number start a new row.
+        if ((i+1) % 2 == 0) {
+            $currentRow = $row;
         }
     }
-    wordListString += "</div>";
-    var para = document.getElementById('wordlist');
-    para.innerHTML = wordListString;
 }
 
 function checkFirstLetters() {
