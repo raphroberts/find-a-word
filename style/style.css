@@ -21,17 +21,16 @@ canvas {
 }
 
 #wordlist {
-    padding: 15px;
-    display: block;
+    margin: 5px;
+    display: inline-block;
     border: 2px solid #accddd;
     background: #e8f1f6;
-    max-width: 200px;
     font-family: Roboto Mono;
     text-transform: capitalize;
-    float: right;
+    float: left;
 }
 
-#wordlist .wordlist-item {
+#col .wordlist-item {
     position: relative;
     display: block;
     padding: 5px;
@@ -41,13 +40,13 @@ canvas {
     border-radius: 4px;
 }
 
-#wordlist .wordlist-item span.text {
+#col .wordlist-item span.text {
     display: inline-block;
     position: relative;
     z-index: 2;
 }
 
-#wordlist .wordlist-item span.text:after {
+#col .wordlist-item span.text:after {
     content: '';
     height: 2px;
     width: 100%;
@@ -63,7 +62,7 @@ canvas {
     transition: transform 0.3s 0.5s;
 }
 
-#wordlist .wordlist-item span.highlight {
+#col .wordlist-item span.highlight {
     position: absolute;
     z-index: 1;
     display: block;
@@ -78,13 +77,19 @@ canvas {
     transition-timing-function: cubic-bezier(0.65, 1.95, 0.02, 0.32);
 }
 
-#wordlist .wordlist-item.complete span.text:after {
+#col .wordlist-item.complete span.text:after {
     transform: scale(1);
 }
 
-#wordlist .wordlist-item.complete span.highlight {
+#col .wordlist-item.complete span.highlight {
     transform: scaleX(1);
     opacity: 1;
+}
+
+#wordlist #col {
+    display: block;
+    float: left;
+    padding: 2px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -92,7 +97,8 @@ canvas {
     .row{
         display:block;
     }
-    #wordlist{
-        float: left;
+    .column{
+        display: block !important;
+        margin: 0px auto !important;
     }
 }

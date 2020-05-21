@@ -131,13 +131,18 @@ function drawCurrentLine(e) {
 function drawWordList() {
     var para = document.getElementById('wordlist');
     // loop through wordlist, check if each word has been found and render accordingly
-    var wordListString = "";
+    var wordListString = "<div id='col'>";
+    var columnBreak = parseInt(wordList.length / 2);
     for (var i = 0; i < wordList.length; i++) {
         wordListString += "<div class='wordlist-item' id='" + wordList[i][4] + "'>";
         wordListString += "<span class='highlight' style='background-color:rgba(" + wordList[i][5] + ")'></span>";
         wordListString += "<span class='text'>" + wordList[i][4] + "</span>"
         wordListString += "</div>";
+        if (i == columnBreak){
+            wordListString += "</div><div id='col'>";
+        }
     }
+    wordListString += "</div>";
     var para = document.getElementById('wordlist');
     para.innerHTML = wordListString;
 }
