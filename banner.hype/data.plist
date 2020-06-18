@@ -50,7 +50,7 @@
 	<key>defaultElementStyles</key>
 	<dict>
 		<key>BackgroundColor</key>
-		<string>#4397E2</string>
+		<string>#E29A00</string>
 		<key>BorderWidth</key>
 		<real>0.0</real>
 	</dict>
@@ -75,7 +75,28 @@
 		<string>4</string>
 	</array>
 	<key>fonts</key>
-	<array/>
+	<array>
+		<dict>
+			<key>additionalHeadHTML</key>
+			<string>&lt;link href='https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=latin' rel='stylesheet' type='text/css'&gt;</string>
+			<key>categories</key>
+			<array>
+				<string>Google Fonts</string>
+				<string>Web</string>
+				<string>iOS</string>
+			</array>
+			<key>fontNames</key>
+			<array>
+				<string>Roboto Mono</string>
+			</array>
+			<key>fontSource</key>
+			<integer>1</integer>
+			<key>name</key>
+			<string>Roboto Mono</string>
+			<key>oid</key>
+			<string>53F5E1EB-033E-4F21-BECD-DE1889C57F28-62447-00032B38E588176A</string>
+		</dict>
+	</array>
 	<key>guidesAreLocked</key>
 	<false/>
 	<key>guidesAreVisible</key>
@@ -83,11 +104,11 @@
 	<key>hasManuallyChangedCSSPositioning</key>
 	<false/>
 	<key>lastCheckDate</key>
-	<date>2020-05-20T04:17:19Z</date>
+	<date>2020-05-22T03:10:29Z</date>
 	<key>layout</key>
 	<dict>
 		<key>currentInspectorPane</key>
-		<integer>3</integer>
+		<integer>2</integer>
 		<key>customizableLayout</key>
 		<dict>
 			<key>frame</key>
@@ -166,7 +187,7 @@
 									<array>
 										<dict>
 											<key>frame</key>
-											<string>{{136, 0}, {922, 365}}</string>
+											<string>{{136, 0}, {922, 379}}</string>
 											<key>identifier</key>
 											<string>container 4</string>
 											<key>isCustomizableViewContainer</key>
@@ -179,7 +200,7 @@
 											<array>
 												<dict>
 													<key>frame</key>
-													<string>{{136, 0}, {922, 365}}</string>
+													<string>{{136, 0}, {922, 379}}</string>
 													<key>identifier</key>
 													<string>timelineCustomizableContainer</string>
 													<key>isCustomizableViewContainer</key>
@@ -189,7 +210,7 @@
 										</dict>
 										<dict>
 											<key>frame</key>
-											<string>{{136, 366}, {922, 412}}</string>
+											<string>{{136, 380}, {922, 398}}</string>
 											<key>identifier</key>
 											<string>container 3</string>
 											<key>isCustomizableViewContainer</key>
@@ -202,7 +223,7 @@
 											<array>
 												<dict>
 													<key>frame</key>
-													<string>{{136, 366}, {922, 412}}</string>
+													<string>{{136, 380}, {922, 398}}</string>
 													<key>identifier</key>
 													<string>sceneEditorCustomizableContainer</string>
 													<key>isCustomizableViewContainer</key>
@@ -267,7 +288,7 @@
 		<key>keyframeTimelineHeight</key>
 		<real>124</real>
 		<key>mainWindowFrame</key>
-		<string>-47 901 1600 822 -47 846 1600 877 </string>
+		<string>178 1304 1600 822 -47 1080 2048 1129 </string>
 		<key>openTabs</key>
 		<array>
 			<dict>
@@ -275,6 +296,10 @@
 				<string>HypeJavascript</string>
 				<key>oid</key>
 				<string>21</string>
+			</dict>
+			<dict>
+				<key>className</key>
+				<string>HeadHTMLEditor</string>
 			</dict>
 		</array>
 		<key>selectedTabIndex</key>
@@ -318,7 +343,7 @@
 	<key>monotypeProjectID</key>
 	<string>83CA4C43-B17E-4321-A3A8-C238B99BFFD8-62447-000282D25C0E8251</string>
 	<key>oidCounter</key>
-	<integer>23</integer>
+	<integer>43</integer>
 	<key>resourcesInfo</key>
 	<dict>
 		<key>groups</key>
@@ -377,6 +402,20 @@
 				<key>resources</key>
 				<array>
 					<string>bell.mp3</string>
+				</array>
+			</dict>
+			<dict>
+				<key>expanded</key>
+				<true/>
+				<key>isPosterImageGroup</key>
+				<false/>
+				<key>name</key>
+				<string>trumpet</string>
+				<key>oid</key>
+				<string>38</string>
+				<key>resources</key>
+				<array>
+					<string>trumpet.mp3</string>
 				</array>
 			</dict>
 		</array>
@@ -542,11 +581,11 @@
 			</dict>
 			<dict>
 				<key>fileModificationDate</key>
-				<date>2020-05-20T01:05:58Z</date>
+				<date>2020-05-21T05:27:58Z</date>
 				<key>fileSize</key>
-				<integer>188062</integer>
+				<integer>107262</integer>
 				<key>md5</key>
-				<string>956A434A1F4517ECDB7B80B42BD616D6</string>
+				<string>E8000ABE43E165DF9414D3521563A89F</string>
 				<key>notifyOnBookmarkChange</key>
 				<true/>
 				<key>originalPath</key>
@@ -555,16 +594,16 @@
 				<string>title.png</string>
 				<key>securityScopedBookmark</key>
 				<data>
-				Ym9va+gCAAAAAAQQMAAAAKneW5pUAEh0diVkOP4j7SRm
-				8ZH4zByTz7TZ2FpJvblC5AEAAAQAAAADAwAAAAkAKAUA
+				Ym9va+gCAAAAAAQQMAAAAOnr725vBcBjWBTPg6W4MvMO
+				OafJZURJzi483vJAS3ge5AEAAAQAAAADAwAAAAkAKAUA
 				AAABAQAAVXNlcnMAAAALAAAAAQEAAHJhcGhyb2JlcnRz
 				AAsAAAABAQAAZmluZC1hLXdvcmQABgAAAAEBAABpbWFn
 				ZXMAAAkAAAABAQAAdGl0bGUucG5nAAAAFAAAAAEGAAAQ
 				AAAAIAAAADQAAABIAAAAWAAAAAgAAAAEAwAAnlMAAAAA
 				AAAIAAAABAMAAMJ6BQAAAAAACAAAAAQDAABP2KIAAAAA
-				AAgAAAAEAwAAyoW7AAAAAAAIAAAABAMAAJmluwAAAAAA
+				AAgAAAAEAwAAyoW7AAAAAAAIAAAABAMAAMPtvAAAAAAA
 				FAAAAAEGAACIAAAAmAAAAKgAAAC4AAAAyAAAAAgAAAAA
-				BAAAQcI6UJHZ168YAAAAAQIAAAEAAAAAAAAADwAAAAAA
+				BAAAQcI7JG9P5T0YAAAAAQIAAAEAAAAAAAAADwAAAAAA
 				AAAAAAAAAAAAAAgAAAAEAwAAAwAAAAAAAAAEAAAAAwMA
 				APUBAAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNp
 				bnRvc2ggSEQIAAAABAMAAACgIGh0AAAACAAAAAAEAABB
@@ -590,6 +629,55 @@
 				<key>type</key>
 				<string>FileResource</string>
 			</dict>
+			<dict>
+				<key>fileModificationDate</key>
+				<date>2020-05-22T02:59:53Z</date>
+				<key>fileSize</key>
+				<integer>101181</integer>
+				<key>md5</key>
+				<string>5ACC4C358ABE356AB34CB46990213C87</string>
+				<key>notifyOnBookmarkChange</key>
+				<true/>
+				<key>originalPath</key>
+				<string>/Users/raphroberts/Downloads/trumpet.mp3</string>
+				<key>resourceName</key>
+				<string>trumpet.mp3</string>
+				<key>securityScopedBookmark</key>
+				<data>
+				Ym9va8ACAAAAAAQQMAAAAAM3TQXPTg+fVxGP/hieFlZH
+				z2MKhrhRdI3ypBGLGNi5vAEAAAQAAAADAwAAAAkAKAUA
+				AAABAQAAVXNlcnMAAAALAAAAAQEAAHJhcGhyb2JlcnRz
+				AAkAAAABAQAARG93bmxvYWRzAAAACwAAAAEBAAB0cnVt
+				cGV0Lm1wMwAQAAAAAQYAABAAAAAgAAAANAAAAEgAAAAI
+				AAAABAMAAJ5TAAAAAAAACAAAAAQDAADCegUAAAAAAAgA
+				AAAEAwAA9XoFAAAAAAAIAAAABAMAAKO5vQAAAAAAEAAA
+				AAEGAAB0AAAAhAAAAJQAAACkAAAACAAAAAAEAABBwju7
+				1H2JYhgAAAABAgAAAQAAAAAAAAAPAAAAAAAAAAAAAAAA
+				AAAACAAAAAQDAAACAAAAAAAAAAQAAAADAwAA9QEAAAgA
+				AAABCQAAZmlsZTovLy8MAAAAAQEAAE1hY2ludG9zaCBI
+				RAgAAAAEAwAAAKAgaHQAAAAIAAAAAAQAAEHBzJAaTU9x
+				JAAAAAEBAABCQkQwMzU4QS1CNDA3LTQxQzctQUE5OS0z
+				NTNEMzJFRTQ0QzQYAAAAAQIAAIEAAAABAAAA7xMAAAEA
+				AAAAAAAAAAAAAAEAAAABAQAALwAAAAAAAAABBQAAzAAA
+				AP7///8BAAAAAAAAABAAAAAEEAAAXAAAAAAAAAAFEAAA
+				tAAAAAAAAAAQEAAA3AAAAAAAAABAEAAAzAAAAAAAAAAC
+				IAAAqAEAAAAAAAAFIAAAGAEAAAAAAAAQIAAAKAEAAAAA
+				AAARIAAAXAEAAAAAAAASIAAAPAEAAAAAAAATIAAATAEA
+				AAAAAAAgIAAAiAEAAAAAAAAwIAAAtAEAAAAAAAABwAAA
+				/AAAAAAAAAARwAAAIAAAAAAAAAASwAAADAEAAAAAAAAQ
+				0AAABAAAAAAAAAA=
+				</data>
+				<key>shouldAutoResize</key>
+				<true/>
+				<key>shouldIncludeInDocumentHeadHTML</key>
+				<false/>
+				<key>shouldPreload</key>
+				<true/>
+				<key>shouldRemoveWhenNoLongerReferenced</key>
+				<false/>
+				<key>type</key>
+				<string>FileResource</string>
+			</dict>
 		</array>
 	</dict>
 	<key>sceneContainers</key>
@@ -609,19 +697,21 @@
 						<key>timeCursors</key>
 						<dict>
 							<key>14</key>
-							<real>1</real>
+							<real>0.0</real>
+							<key>32</key>
+							<real>3.5666666030883789</real>
 							<key>kTimelineDefaultIdentifier</key>
-							<real>1</real>
+							<real>0.0</real>
 						</dict>
 						<key>timescale</key>
-						<integer>60</integer>
+						<integer>30</integer>
 					</dict>
 					<key>canvasSize</key>
-					<string>{922, 789}</string>
+					<string>{1229, 530}</string>
 					<key>hypeScene</key>
 					<dict>
 						<key>backgroundColor</key>
-						<string>#C4E3CA</string>
+						<string>#8EC840</string>
 						<key>breakpointWidth</key>
 						<real>600</real>
 						<key>name</key>
@@ -642,9 +732,11 @@
 					<key>rootSymbolControllerOid</key>
 					<string>2</string>
 					<key>scrollViewOffset</key>
-					<string>{0, 117}</string>
+					<string>{0, 0}</string>
 					<key>userGuides</key>
 					<array/>
+					<key>zoomFactor</key>
+					<real>0.75</real>
 				</dict>
 			</array>
 		</dict>
@@ -693,9 +785,23 @@ function sparkle(hypeDocument, element, event) {
 				<key>addToNewSceneControllers</key>
 				<false/>
 				<key>currentTimelineIdentifier</key>
-				<string>14</string>
+				<string>32</string>
 				<key>customBehaviors</key>
-				<array/>
+				<array>
+					<dict>
+						<key>actions</key>
+						<array>
+							<dict>
+								<key>javascriptOid</key>
+								<string>21</string>
+								<key>type</key>
+								<integer>4</integer>
+							</dict>
+						</array>
+						<key>customBehaviorName</key>
+						<string>js function</string>
+					</dict>
+				</array>
 				<key>elements</key>
 				<dict>
 					<key>13</key>
@@ -728,7 +834,7 @@ function sparkle(hypeDocument, element, event) {
 							<key>identifier</key>
 							<string>Opacity</string>
 							<key>objectValue</key>
-							<string>0</string>
+							<string>0.4</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -740,7 +846,7 @@ function sparkle(hypeDocument, element, event) {
 							<key>identifier</key>
 							<string>Top</string>
 							<key>objectValue</key>
-							<string>-227px</string>
+							<string>-235px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -776,7 +882,7 @@ function sparkle(hypeDocument, element, event) {
 							<key>identifier</key>
 							<string>Left</string>
 							<key>objectValue</key>
-							<string>41px</string>
+							<string>31px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -792,9 +898,15 @@ function sparkle(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
+							<string>InnerHTML</string>
+							<key>objectValue</key>
+							<string></string>
+						</dict>
+						<dict>
+							<key>identifier</key>
 							<string>ZIndex</string>
 							<key>objectValue</key>
-							<string>3</string>
+							<string>4</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -873,6 +985,10 @@ function sparkle(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
+							<string>Display</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
 							<string>Parent</string>
 							<key>objectValue</key>
 							<string>23</string>
@@ -921,6 +1037,12 @@ function sparkle(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
+							<string>InnerHTML</string>
+							<key>objectValue</key>
+							<string></string>
+						</dict>
+						<dict>
+							<key>identifier</key>
 							<string>Height</string>
 							<key>objectValue</key>
 							<string>79px</string>
@@ -941,7 +1063,7 @@ function sparkle(hypeDocument, element, event) {
 							<key>identifier</key>
 							<string>ZIndex</string>
 							<key>objectValue</key>
-							<string>2</string>
+							<string>3</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -989,7 +1111,7 @@ function sparkle(hypeDocument, element, event) {
 							<key>identifier</key>
 							<string>Width</string>
 							<key>objectValue</key>
-							<string>601px</string>
+							<string>347px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -999,29 +1121,9 @@ function sparkle(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>ActionHandlerOnMouseClick</string>
-							<key>objectValue</key>
-							<dict>
-								<key>actions</key>
-								<array>
-									<dict>
-										<key>playInReverse</key>
-										<false/>
-										<key>symbolOid</key>
-										<string>2</string>
-										<key>timelineIdentifier</key>
-										<string>14</string>
-										<key>type</key>
-										<integer>3</integer>
-									</dict>
-								</array>
-							</dict>
-						</dict>
-						<dict>
-							<key>identifier</key>
 							<string>Left</string>
 							<key>objectValue</key>
-							<string>0px</string>
+							<string>137px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1108,7 +1210,7 @@ function sparkle(hypeDocument, element, event) {
 							<key>identifier</key>
 							<string>Overflow</string>
 							<key>objectValue</key>
-							<string>visible</string>
+							<string>hidden</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1130,9 +1232,41 @@ function sparkle(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
+							<string>ActionHandlerOnMouseClick</string>
+							<key>objectValue</key>
+							<dict>
+								<key>actions</key>
+								<array>
+									<dict>
+										<key>playInReverse</key>
+										<false/>
+										<key>symbolOid</key>
+										<string>2</string>
+										<key>timelineIdentifier</key>
+										<string>32</string>
+										<key>type</key>
+										<integer>3</integer>
+									</dict>
+								</array>
+							</dict>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Cursor</string>
+							<key>objectValue</key>
+							<string>pointer</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
 							<string>TagName</string>
 							<key>objectValue</key>
 							<string>div</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>AccessibilityRole</string>
+							<key>objectValue</key>
+							<string>button</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1145,6 +1279,420 @@ function sparkle(hypeDocument, element, event) {
 							<string>ClassType</string>
 							<key>objectValue</key>
 							<string>Group</string>
+						</dict>
+					</array>
+					<key>36</key>
+					<array>
+						<dict>
+							<key>identifier</key>
+							<string>FontFamily</string>
+							<key>objectValue</key>
+							<string>'Roboto Mono'</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>TagName</string>
+							<key>objectValue</key>
+							<string>div</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>FontWeight</string>
+							<key>objectValue</key>
+							<string>normal</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>PaddingRight</string>
+							<key>objectValue</key>
+							<string>8px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>FontSize</string>
+							<key>objectValue</key>
+							<string>24px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Opacity</string>
+							<key>objectValue</key>
+							<string>0</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Display</string>
+							<key>objectValue</key>
+							<string>inline</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>WordWrap</string>
+							<key>objectValue</key>
+							<string>break-word</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ClassType</string>
+							<key>objectValue</key>
+							<string>Text</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Top</string>
+							<key>objectValue</key>
+							<string>13px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>PaddingBottom</string>
+							<key>objectValue</key>
+							<string>8px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Parent</string>
+							<key>objectValue</key>
+							<string>23</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ScaleY</string>
+							<key>objectValue</key>
+							<string>0.1000000000000001</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>TextShadowYOffset</string>
+							<key>objectValue</key>
+							<string>2px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>FontStyle</string>
+							<key>objectValue</key>
+							<string>normal</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>WhiteSpaceCollapsing</string>
+							<key>objectValue</key>
+							<string>preserve</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Position</string>
+							<key>objectValue</key>
+							<string>absolute</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Height</string>
+							<key>objectValue</key>
+							<string>31px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Left</string>
+							<key>objectValue</key>
+							<string>207px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>TextShadowBlurRadius</string>
+							<key>objectValue</key>
+							<string>5px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ScaleX</string>
+							<key>objectValue</key>
+							<string>0.1000000000000001</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>InnerHTML</string>
+							<key>objectValue</key>
+							<string>YOU DID IT!&lt;br&gt;</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ZIndex</string>
+							<key>objectValue</key>
+							<string>9</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Width</string>
+							<key>objectValue</key>
+							<string>159px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>PaddingLeft</string>
+							<key>objectValue</key>
+							<string>8px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>TextShadowColor</string>
+							<key>objectValue</key>
+							<string>#000</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>PaddingTop</string>
+							<key>objectValue</key>
+							<string>8px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>TextShadowXOffset</string>
+							<key>objectValue</key>
+							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Overflow</string>
+							<key>objectValue</key>
+							<string>visible</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>DisplayName</string>
+							<key>objectValue</key>
+							<string>Text</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>TextColor</string>
+							<key>objectValue</key>
+							<string>#FFF</string>
+						</dict>
+					</array>
+					<key>37</key>
+					<array>
+						<dict>
+							<key>identifier</key>
+							<string>ElementShadowColor</string>
+							<key>objectValue</key>
+							<string>#000</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderStyleRight</string>
+							<key>objectValue</key>
+							<string>Solid</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ElementShadowYOffset</string>
+							<key>objectValue</key>
+							<string>2px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BackgroundColor</string>
+							<key>objectValue</key>
+							<string>#E29A00</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthBottom</string>
+							<key>objectValue</key>
+							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderStyleTop</string>
+							<key>objectValue</key>
+							<string>Solid</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Parent</string>
+							<key>objectValue</key>
+							<string>23</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthRight</string>
+							<key>objectValue</key>
+							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Opacity</string>
+							<key>objectValue</key>
+							<string>0</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthTop</string>
+							<key>objectValue</key>
+							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderColorBottom</string>
+							<key>objectValue</key>
+							<string>#D8DDE4</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderStyleLeft</string>
+							<key>objectValue</key>
+							<string>Solid</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ElementShadowXOffset</string>
+							<key>objectValue</key>
+							<string>2px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderRadiusTopRight</string>
+							<key>objectValue</key>
+							<string>10px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>DisplayName</string>
+							<key>objectValue</key>
+							<string>Rounded Rectangle</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Height</string>
+							<key>objectValue</key>
+							<string>63px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderColorTop</string>
+							<key>objectValue</key>
+							<string>#D8DDE4</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ExplicitDimensions</string>
+							<key>objectValue</key>
+							<string>YES</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ZIndex</string>
+							<key>objectValue</key>
+							<string>8</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Top</string>
+							<key>objectValue</key>
+							<string>7px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>TagName</string>
+							<key>objectValue</key>
+							<string>div</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ShadowType</string>
+							<key>objectValue</key>
+							<string>0</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderStyleBottom</string>
+							<key>objectValue</key>
+							<string>Solid</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ElementShadowBlurRadius</string>
+							<key>objectValue</key>
+							<string>12px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ScaleY</string>
+							<key>objectValue</key>
+							<string>0.1000000000000001</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Position</string>
+							<key>objectValue</key>
+							<string>absolute</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderColorLeft</string>
+							<key>objectValue</key>
+							<string>#D8DDE4</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Width</string>
+							<key>objectValue</key>
+							<string>187px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ScaleX</string>
+							<key>objectValue</key>
+							<string>0.1000000000000001</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ClassType</string>
+							<key>objectValue</key>
+							<string>Rounded Rectangle</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Left</string>
+							<key>objectValue</key>
+							<string>201px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderRadiusBottomRight</string>
+							<key>objectValue</key>
+							<string>10px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderColorRight</string>
+							<key>objectValue</key>
+							<string>#D8DDE4</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderRadiusBottomLeft</string>
+							<key>objectValue</key>
+							<string>10px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderRadiusTopLeft</string>
+							<key>objectValue</key>
+							<string>10px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthLeft</string>
+							<key>objectValue</key>
+							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Overflow</string>
+							<key>objectValue</key>
+							<string>visible</string>
 						</dict>
 					</array>
 					<key>6</key>
@@ -1219,7 +1767,7 @@ function sparkle(hypeDocument, element, event) {
 							<key>identifier</key>
 							<string>SizeRatio</string>
 							<key>objectValue</key>
-							<string>7.57087</string>
+							<string>7.60079</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1261,7 +1809,7 @@ function sparkle(hypeDocument, element, event) {
 							<key>identifier</key>
 							<string>OriginalHeight</string>
 							<key>objectValue</key>
-							<string>254px</string>
+							<string>253px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1370,15 +1918,25 @@ function sparkle(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
+							<string>InnerHTML</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
 							<string>ZIndex</string>
 							<key>objectValue</key>
-							<string>4</string>
+							<string>7</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
 							<string>Width</string>
 							<key>objectValue</key>
 							<string>295px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>DisplayHiddenOverride</string>
+							<key>objectValue</key>
+							<string>0</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1391,6 +1949,12 @@ function sparkle(hypeDocument, element, event) {
 							<string>Overflow</string>
 							<key>objectValue</key>
 							<string>visible</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Locked</string>
+							<key>objectValue</key>
+							<string>0</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1422,28 +1986,6 @@ function sparkle(hypeDocument, element, event) {
 				<string>Scene Symbol</string>
 				<key>oid</key>
 				<string>2</string>
-				<key>onSceneDragActionHandler</key>
-				<dict>
-					<key>actions</key>
-					<array>
-						<dict>
-							<key>type</key>
-							<integer>0</integer>
-						</dict>
-					</array>
-				</dict>
-				<key>onSceneLoadActionHandler</key>
-				<dict>
-					<key>actions</key>
-					<array>
-						<dict>
-							<key>javascriptOid</key>
-							<string>21</string>
-							<key>type</key>
-							<integer>4</integer>
-						</dict>
-					</array>
-				</dict>
 				<key>onTopDuringSceneTransition</key>
 				<true/>
 				<key>properties</key>
@@ -1468,7 +2010,7 @@ function sparkle(hypeDocument, element, event) {
 						<array>
 							<dict>
 								<key>duration</key>
-								<real>2</real>
+								<real>10</real>
 								<key>endValue</key>
 								<dict>
 									<key>identifier</key>
@@ -1504,7 +2046,7 @@ function sparkle(hypeDocument, element, event) {
 							</dict>
 							<dict>
 								<key>duration</key>
-								<real>2</real>
+								<real>10</real>
 								<key>endValue</key>
 								<dict>
 									<key>identifier</key>
@@ -1548,7 +2090,7 @@ function sparkle(hypeDocument, element, event) {
 								<key>referenceOid</key>
 								<string>8</string>
 								<key>startTime</key>
-								<real>2</real>
+								<real>10</real>
 								<key>startValue</key>
 								<dict>
 									<key>identifier</key>
@@ -1577,7 +2119,7 @@ function sparkle(hypeDocument, element, event) {
 								<key>referenceOid</key>
 								<string>8</string>
 								<key>startTime</key>
-								<real>2</real>
+								<real>10</real>
 								<key>startValue</key>
 								<dict>
 									<key>identifier</key>
@@ -1617,42 +2159,6 @@ function sparkle(hypeDocument, element, event) {
 						<array>
 							<dict>
 								<key>duration</key>
-								<real>0.20000000298023224</real>
-								<key>endValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>Opacity</string>
-									<key>objectValue</key>
-									<string>1</string>
-								</dict>
-								<key>identifier</key>
-								<string>Opacity</string>
-								<key>isRelative</key>
-								<false/>
-								<key>referenceOid</key>
-								<string>13</string>
-								<key>startTime</key>
-								<real>0.0</real>
-								<key>startValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>Opacity</string>
-									<key>objectValue</key>
-									<string>0</string>
-								</dict>
-								<key>symbolElementActionAttributesBySymbolTimeline</key>
-								<dict/>
-								<key>timingFunctionOid</key>
-								<string>c</string>
-								<key>type</key>
-								<integer>0</integer>
-								<key>uuid</key>
-								<string>C3428648-5804-4D2B-AD62-AC4E3130B106-62447-0002830C38F72F87</string>
-								<key>zIndex</key>
-								<integer>1</integer>
-							</dict>
-							<dict>
-								<key>duration</key>
 								<real>2</real>
 								<key>endValue</key>
 								<dict>
@@ -1689,56 +2195,92 @@ function sparkle(hypeDocument, element, event) {
 							</dict>
 							<dict>
 								<key>duration</key>
-								<real>0.46666666865348816</real>
+								<real>1</real>
 								<key>endValue</key>
 								<dict>
 									<key>identifier</key>
-									<string>BackgroundColor</string>
+									<string>ScaleX</string>
 									<key>objectValue</key>
-									<string>#ED3ABD</string>
+									<string>1.012525986187309</string>
 								</dict>
 								<key>identifier</key>
-								<string>BackgroundColor</string>
+								<string>ScaleX</string>
 								<key>isRelative</key>
 								<false/>
 								<key>referenceOid</key>
-								<string>20</string>
+								<string>8</string>
 								<key>startTime</key>
 								<real>0.0</real>
 								<key>startValue</key>
 								<dict>
 									<key>identifier</key>
-									<string>BackgroundColor</string>
+									<string>ScaleX</string>
 									<key>objectValue</key>
-									<string>#ED9138</string>
+									<string>0.9125259861873087</string>
 								</dict>
 								<key>symbolElementActionAttributesBySymbolTimeline</key>
 								<dict/>
 								<key>timingFunctionOid</key>
-								<string>c</string>
+								<string>28</string>
 								<key>type</key>
 								<integer>0</integer>
 								<key>uuid</key>
-								<string>A6FF56F2-D4BD-466E-BA1F-D90768BB7FBB-62447-000283745808FB84</string>
+								<string>25DBDB0C-B892-448F-A759-428E14809773-62447-0002E11AF7BD4714</string>
 								<key>zIndex</key>
 								<integer>1</integer>
 							</dict>
 							<dict>
 								<key>duration</key>
-								<real>0.46666666865348816</real>
+								<real>1</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleY</string>
+									<key>objectValue</key>
+									<string>1.012525986187309</string>
+								</dict>
+								<key>identifier</key>
+								<string>ScaleY</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>8</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleY</string>
+									<key>objectValue</key>
+									<string>0.9125259861873087</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>28</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>F5EEAB17-C3AE-4F9F-9A87-4FCFECC1FF0C-62447-0002E11AF7F2DB86</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.26666668057441711</real>
 								<key>endValue</key>
 								<dict>
 									<key>identifier</key>
 									<string>Opacity</string>
 									<key>objectValue</key>
-									<string>1</string>
+									<string>1.400000000000003</string>
 								</dict>
 								<key>identifier</key>
 								<string>Opacity</string>
 								<key>isRelative</key>
 								<false/>
 								<key>referenceOid</key>
-								<string>20</string>
+								<string>13</string>
 								<key>startTime</key>
 								<real>0.0</real>
 								<key>startValue</key>
@@ -1746,7 +2288,7 @@ function sparkle(hypeDocument, element, event) {
 									<key>identifier</key>
 									<string>Opacity</string>
 									<key>objectValue</key>
-									<string>-1</string>
+									<string>0.8000000000000003</string>
 								</dict>
 								<key>symbolElementActionAttributesBySymbolTimeline</key>
 								<dict/>
@@ -1755,7 +2297,7 @@ function sparkle(hypeDocument, element, event) {
 								<key>type</key>
 								<integer>0</integer>
 								<key>uuid</key>
-								<string>C3B2F462-196E-4F88-A4FD-9176F395E96E-62447-0002837CB42A0E8C</string>
+								<string>C3428648-5804-4D2B-AD62-AC4E3130B106-62447-0002830C38F72F87</string>
 								<key>zIndex</key>
 								<integer>1</integer>
 							</dict>
@@ -1802,13 +2344,13 @@ function sparkle(hypeDocument, element, event) {
 							</dict>
 							<dict>
 								<key>duration</key>
-								<real>1.6999999731779099</real>
+								<real>1.4666666686534882</real>
 								<key>endValue</key>
 								<dict>
 									<key>identifier</key>
 									<string>Opacity</string>
 									<key>objectValue</key>
-									<string>1</string>
+									<string>1.400000000000003</string>
 								</dict>
 								<key>identifier</key>
 								<string>Opacity</string>
@@ -1817,13 +2359,13 @@ function sparkle(hypeDocument, element, event) {
 								<key>referenceOid</key>
 								<string>13</string>
 								<key>startTime</key>
-								<real>0.20000000298023224</real>
+								<real>0.26666668057441711</real>
 								<key>startValue</key>
 								<dict>
 									<key>identifier</key>
 									<string>Opacity</string>
 									<key>objectValue</key>
-									<string>1</string>
+									<string>1.400000000000003</string>
 								</dict>
 								<key>symbolElementActionAttributesBySymbolTimeline</key>
 								<dict/>
@@ -1838,136 +2380,28 @@ function sparkle(hypeDocument, element, event) {
 							</dict>
 							<dict>
 								<key>duration</key>
-								<real>0.26666668057441711</real>
-								<key>endValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>BackgroundColor</string>
-									<key>objectValue</key>
-									<string>#47D5C0</string>
-								</dict>
-								<key>identifier</key>
-								<string>BackgroundColor</string>
-								<key>isRelative</key>
-								<false/>
-								<key>referenceOid</key>
-								<string>20</string>
-								<key>startTime</key>
-								<real>0.46666666865348816</real>
-								<key>startValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>BackgroundColor</string>
-									<key>objectValue</key>
-									<string>#ED3ABD</string>
-								</dict>
-								<key>symbolElementActionAttributesBySymbolTimeline</key>
-								<dict/>
-								<key>timingFunctionOid</key>
-								<string>c</string>
-								<key>type</key>
-								<integer>0</integer>
-								<key>uuid</key>
-								<string>7726AEC2-C5C0-4634-8802-3C5F2E452703-62447-0002837458194447</string>
-								<key>zIndex</key>
-								<integer>2</integer>
-							</dict>
-							<dict>
-								<key>duration</key>
-								<real>1.0333333313465118</real>
-								<key>endValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>Opacity</string>
-									<key>objectValue</key>
-									<string>1</string>
-								</dict>
-								<key>identifier</key>
-								<string>Opacity</string>
-								<key>isRelative</key>
-								<false/>
-								<key>referenceOid</key>
-								<string>20</string>
-								<key>startTime</key>
-								<real>0.46666666865348816</real>
-								<key>startValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>Opacity</string>
-									<key>objectValue</key>
-									<string>1</string>
-								</dict>
-								<key>symbolElementActionAttributesBySymbolTimeline</key>
-								<dict/>
-								<key>timingFunctionOid</key>
-								<string>c</string>
-								<key>type</key>
-								<integer>0</integer>
-								<key>uuid</key>
-								<string>7B2FE3DD-650A-4106-98BE-1280C84D6435-62447-000287E5038B8C1E</string>
-								<key>zIndex</key>
-								<integer>2</integer>
-							</dict>
-							<dict>
-								<key>duration</key>
-								<real>0.26666665077209473</real>
-								<key>endValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>BackgroundColor</string>
-									<key>objectValue</key>
-									<string>#75ADED</string>
-								</dict>
-								<key>identifier</key>
-								<string>BackgroundColor</string>
-								<key>isRelative</key>
-								<false/>
-								<key>referenceOid</key>
-								<string>20</string>
-								<key>startTime</key>
 								<real>0.73333334922790527</real>
-								<key>startValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>BackgroundColor</string>
-									<key>objectValue</key>
-									<string>#47D5C0</string>
-								</dict>
-								<key>symbolElementActionAttributesBySymbolTimeline</key>
-								<dict/>
-								<key>timingFunctionOid</key>
-								<string>c</string>
-								<key>type</key>
-								<integer>0</integer>
-								<key>uuid</key>
-								<string>DD0661AA-5AA0-42F5-96FE-BF20DFE350AC-62447-000284ACE5AA6177</string>
-								<key>zIndex</key>
-								<integer>3</integer>
-							</dict>
-							<dict>
-								<key>duration</key>
-								<real>0.26666665077209473</real>
 								<key>endValue</key>
 								<dict>
 									<key>identifier</key>
-									<string>BackgroundColor</string>
+									<string>ScaleX</string>
 									<key>objectValue</key>
-									<string>#D12034</string>
+									<string>1.012525986187309</string>
 								</dict>
 								<key>identifier</key>
-								<string>BackgroundColor</string>
+								<string>ScaleX</string>
 								<key>isRelative</key>
 								<false/>
 								<key>referenceOid</key>
-								<string>20</string>
+								<string>8</string>
 								<key>startTime</key>
 								<real>1</real>
 								<key>startValue</key>
 								<dict>
 									<key>identifier</key>
-									<string>BackgroundColor</string>
+									<string>ScaleX</string>
 									<key>objectValue</key>
-									<string>#75ADED</string>
+									<string>1.012525986187309</string>
 								</dict>
 								<key>symbolElementActionAttributesBySymbolTimeline</key>
 								<dict/>
@@ -1976,34 +2410,34 @@ function sparkle(hypeDocument, element, event) {
 								<key>type</key>
 								<integer>0</integer>
 								<key>uuid</key>
-								<string>BB7373F2-EE03-48D5-8E3F-1C5089E13B17-62447-00028377B6DE7D94</string>
+								<string>8FAC2AB9-0EE5-4594-A62F-4A495682411F-62447-0002E11AF7D4A59A</string>
 								<key>zIndex</key>
-								<integer>4</integer>
+								<integer>2</integer>
 							</dict>
 							<dict>
 								<key>duration</key>
-								<real>0.23333334922790527</real>
+								<real>0.73333334922790527</real>
 								<key>endValue</key>
 								<dict>
 									<key>identifier</key>
-									<string>BackgroundColor</string>
+									<string>ScaleY</string>
 									<key>objectValue</key>
-									<string>#63ED76</string>
+									<string>1.012525986187309</string>
 								</dict>
 								<key>identifier</key>
-								<string>BackgroundColor</string>
+								<string>ScaleY</string>
 								<key>isRelative</key>
 								<false/>
 								<key>referenceOid</key>
-								<string>20</string>
+								<string>8</string>
 								<key>startTime</key>
-								<real>1.2666666507720947</real>
+								<real>1</real>
 								<key>startValue</key>
 								<dict>
 									<key>identifier</key>
-									<string>BackgroundColor</string>
+									<string>ScaleY</string>
 									<key>objectValue</key>
-									<string>#D12034</string>
+									<string>1.012525986187309</string>
 								</dict>
 								<key>symbolElementActionAttributesBySymbolTimeline</key>
 								<dict/>
@@ -2012,91 +2446,19 @@ function sparkle(hypeDocument, element, event) {
 								<key>type</key>
 								<integer>0</integer>
 								<key>uuid</key>
-								<string>D53A9AE0-EBD3-4B36-A493-62E452A634AB-62447-000284AF3700A6CB</string>
+								<string>9BCE3B60-79D0-4D36-B589-351A9092D675-62447-0002E11AF801675D</string>
 								<key>zIndex</key>
-								<integer>5</integer>
+								<integer>2</integer>
 							</dict>
 							<dict>
 								<key>duration</key>
-								<real>0.5</real>
+								<real>0.26666665077209473</real>
 								<key>endValue</key>
 								<dict>
 									<key>identifier</key>
 									<string>Opacity</string>
 									<key>objectValue</key>
-									<string>0</string>
-								</dict>
-								<key>identifier</key>
-								<string>Opacity</string>
-								<key>isRelative</key>
-								<false/>
-								<key>referenceOid</key>
-								<string>20</string>
-								<key>startTime</key>
-								<real>1.5</real>
-								<key>startValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>Opacity</string>
-									<key>objectValue</key>
-									<string>1</string>
-								</dict>
-								<key>symbolElementActionAttributesBySymbolTimeline</key>
-								<dict/>
-								<key>timingFunctionOid</key>
-								<string>c</string>
-								<key>type</key>
-								<integer>0</integer>
-								<key>uuid</key>
-								<string>850AE2D8-6543-45B8-B87D-7C72AA6584CB-62447-000287E6CE1A9B4B</string>
-								<key>zIndex</key>
-								<integer>3</integer>
-							</dict>
-							<dict>
-								<key>duration</key>
-								<real>0.39999997615814209</real>
-								<key>endValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>BackgroundColor</string>
-									<key>objectValue</key>
-									<string>#4397E2</string>
-								</dict>
-								<key>identifier</key>
-								<string>BackgroundColor</string>
-								<key>isRelative</key>
-								<false/>
-								<key>referenceOid</key>
-								<string>20</string>
-								<key>startTime</key>
-								<real>1.5</real>
-								<key>startValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>BackgroundColor</string>
-									<key>objectValue</key>
-									<string>#63ED76</string>
-								</dict>
-								<key>symbolElementActionAttributesBySymbolTimeline</key>
-								<dict/>
-								<key>timingFunctionOid</key>
-								<string>c</string>
-								<key>type</key>
-								<integer>0</integer>
-								<key>uuid</key>
-								<string>008EB8C3-94B1-4C5B-8A2D-2D35DF40656F-62447-00028378D82729A1</string>
-								<key>zIndex</key>
-								<integer>6</integer>
-							</dict>
-							<dict>
-								<key>duration</key>
-								<real>0.10000002384185791</real>
-								<key>endValue</key>
-								<dict>
-									<key>identifier</key>
-									<string>Opacity</string>
-									<key>objectValue</key>
-									<string>0</string>
+									<string>0.8000000000000003</string>
 								</dict>
 								<key>identifier</key>
 								<string>Opacity</string>
@@ -2105,13 +2467,13 @@ function sparkle(hypeDocument, element, event) {
 								<key>referenceOid</key>
 								<string>13</string>
 								<key>startTime</key>
-								<real>1.8999999761581421</real>
+								<real>1.7333333492279053</real>
 								<key>startValue</key>
 								<dict>
 									<key>identifier</key>
 									<string>Opacity</string>
 									<key>objectValue</key>
-									<string>1</string>
+									<string>1.400000000000003</string>
 								</dict>
 								<key>symbolElementActionAttributesBySymbolTimeline</key>
 								<dict/>
@@ -2126,28 +2488,28 @@ function sparkle(hypeDocument, element, event) {
 							</dict>
 							<dict>
 								<key>duration</key>
-								<real>0.10000002384185791</real>
+								<real>0.26666665077209473</real>
 								<key>endValue</key>
 								<dict>
 									<key>identifier</key>
-									<string>BackgroundColor</string>
+									<string>ScaleX</string>
 									<key>objectValue</key>
-									<string>#ED5950</string>
+									<string>0.9125259861873088</string>
 								</dict>
 								<key>identifier</key>
-								<string>BackgroundColor</string>
+								<string>ScaleX</string>
 								<key>isRelative</key>
 								<false/>
 								<key>referenceOid</key>
-								<string>20</string>
+								<string>8</string>
 								<key>startTime</key>
-								<real>1.8999999761581421</real>
+								<real>1.7333333492279053</real>
 								<key>startValue</key>
 								<dict>
 									<key>identifier</key>
-									<string>BackgroundColor</string>
+									<string>ScaleX</string>
 									<key>objectValue</key>
-									<string>#4397E2</string>
+									<string>1.012525986187309</string>
 								</dict>
 								<key>symbolElementActionAttributesBySymbolTimeline</key>
 								<dict/>
@@ -2156,9 +2518,45 @@ function sparkle(hypeDocument, element, event) {
 								<key>type</key>
 								<integer>0</integer>
 								<key>uuid</key>
-								<string>347A5FDD-5B0B-4FC2-B392-8D76276B95AE-62447-000284B0BFAC44D1</string>
+								<string>6FB415E4-242C-4F3B-AD4B-CEC0890306BC-62447-0002E134AFB12EDF</string>
 								<key>zIndex</key>
-								<integer>7</integer>
+								<integer>3</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.26666665077209473</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleY</string>
+									<key>objectValue</key>
+									<string>0.9125259861873088</string>
+								</dict>
+								<key>identifier</key>
+								<string>ScaleY</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>8</string>
+								<key>startTime</key>
+								<real>1.7333333492279053</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleY</string>
+									<key>objectValue</key>
+									<string>1.012525986187309</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>8A159639-9366-4DDD-AE01-EA335D72BF4F-62447-0002E13390AD8727</string>
+								<key>zIndex</key>
+								<integer>3</integer>
 							</dict>
 							<dict>
 								<key>duration</key>
@@ -2205,7 +2603,7 @@ function sparkle(hypeDocument, element, event) {
 									<key>identifier</key>
 									<string>Opacity</string>
 									<key>objectValue</key>
-									<string>0</string>
+									<string>0.8000000000000003</string>
 								</dict>
 								<key>symbolElementActionAttributesBySymbolTimeline</key>
 								<dict/>
@@ -2222,19 +2620,19 @@ function sparkle(hypeDocument, element, event) {
 								<key>duration</key>
 								<real>0.0</real>
 								<key>identifier</key>
-								<string>Opacity</string>
+								<string>ScaleX</string>
 								<key>isRelative</key>
 								<false/>
 								<key>referenceOid</key>
-								<string>20</string>
+								<string>8</string>
 								<key>startTime</key>
 								<real>2</real>
 								<key>startValue</key>
 								<dict>
 									<key>identifier</key>
-									<string>Opacity</string>
+									<string>ScaleX</string>
 									<key>objectValue</key>
-									<string>0</string>
+									<string>0.9125259861873088</string>
 								</dict>
 								<key>symbolElementActionAttributesBySymbolTimeline</key>
 								<dict/>
@@ -2243,7 +2641,7 @@ function sparkle(hypeDocument, element, event) {
 								<key>type</key>
 								<integer>0</integer>
 								<key>uuid</key>
-								<string>C3E23346-0C62-4ACC-9CEC-ED16F518EFBE-62447-000287E7BAB115B6</string>
+								<string>B6B47A14-1AB3-43D6-8604-A451C15598F5-62447-0002E12578A129C4</string>
 								<key>zIndex</key>
 								<integer>4</integer>
 							</dict>
@@ -2251,19 +2649,19 @@ function sparkle(hypeDocument, element, event) {
 								<key>duration</key>
 								<real>0.0</real>
 								<key>identifier</key>
-								<string>BackgroundColor</string>
+								<string>ScaleY</string>
 								<key>isRelative</key>
 								<false/>
 								<key>referenceOid</key>
-								<string>20</string>
+								<string>8</string>
 								<key>startTime</key>
 								<real>2</real>
 								<key>startValue</key>
 								<dict>
 									<key>identifier</key>
-									<string>BackgroundColor</string>
+									<string>ScaleY</string>
 									<key>objectValue</key>
-									<string>#ED5950</string>
+									<string>0.9125259861873088</string>
 								</dict>
 								<key>symbolElementActionAttributesBySymbolTimeline</key>
 								<dict/>
@@ -2272,9 +2670,9 @@ function sparkle(hypeDocument, element, event) {
 								<key>type</key>
 								<integer>0</integer>
 								<key>uuid</key>
-								<string>246152ED-524B-4903-B9DA-7D9E228C75B3-62447-0002837A25E30F73</string>
+								<string>3DADFC63-BA5A-4AC4-AAF9-FDB8CE435132-62447-0002E12578C35C22</string>
 								<key>zIndex</key>
-								<integer>8</integer>
+								<integer>4</integer>
 							</dict>
 						</array>
 						<key>firstKeyframeIsRelative</key>
@@ -2289,6 +2687,514 @@ function sparkle(hypeDocument, element, event) {
 						<false/>
 						<key>name</key>
 						<string>sparkle</string>
+						<key>userDefinedDuration</key>
+						<real>0.0</real>
+					</dict>
+					<dict>
+						<key>animations</key>
+						<array>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>DisplayHiddenOverride</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>identifier</key>
+								<string>DisplayHiddenOverride</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>8</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>DisplayHiddenOverride</string>
+									<key>objectValue</key>
+									<string>0</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>A482F41C-2787-456A-B45E-F2B010EF2A79-62447-00032B216CBDA8EF</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>Opacity</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>36</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>Opacity</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>f</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>A863E160-3BAE-4090-BC5B-081D946A2ECD-62447-00032B4B338A033F</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>Opacity</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>37</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>Opacity</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>f</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>BB193899-79BD-44EE-8005-B0CC5549404C-62447-00032B64D8300D2A</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>ActionHandler</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>32</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ActionHandler</string>
+									<key>objectValue</key>
+									<dict>
+										<key>actions</key>
+										<array>
+											<dict>
+												<key>loop</key>
+												<false/>
+												<key>resourceGroupOid</key>
+												<string>38</string>
+												<key>type</key>
+												<integer>12</integer>
+											</dict>
+										</array>
+									</dict>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>2</integer>
+								<key>uuid</key>
+								<string>C56896C0-3902-450A-83E3-34C9A4E24F62-62447-00032C0CE05831EC</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>10</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>RotationAngleZ</string>
+									<key>objectValue</key>
+									<string>90deg</string>
+								</dict>
+								<key>identifier</key>
+								<string>RotationAngleZ</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>13</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>RotationAngleZ</string>
+									<key>objectValue</key>
+									<string>0deg</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>b</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>01ABCAA0-3470-4570-9C72-33E95B1C6C5A-62447-00032B2B7F75E698</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>1</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleX</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>identifier</key>
+								<string>ScaleX</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>37</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleX</string>
+									<key>objectValue</key>
+									<string>0.1000000000000001</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>f</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>BFFA82DF-F25C-4FB0-ADA4-B1EB879D326F-62447-00032C3D1DEDF60C</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>1</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleY</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>identifier</key>
+								<string>ScaleY</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>37</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleY</string>
+									<key>objectValue</key>
+									<string>0.1000000000000001</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>f</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>F531E569-4AE3-49DB-B890-B55D94DED1E3-62447-00032C3D1E24624D</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>1</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleX</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>identifier</key>
+								<string>ScaleX</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>36</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleX</string>
+									<key>objectValue</key>
+									<string>0.1000000000000001</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>f</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>F827FDCB-086D-4D19-837E-988C49B8D6B5-62447-00032C3D1E4FD114</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>1</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleY</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>identifier</key>
+								<string>ScaleY</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>36</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleY</string>
+									<key>objectValue</key>
+									<string>0.1000000000000001</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>f</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>E0331EC5-8FCB-4ED7-A5E0-96052A7167D8-62447-00032C3D1E7A173E</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>DisplayHiddenOverride</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>8</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>DisplayHiddenOverride</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>931F2338-958E-4227-94E0-6E3311DCEA10-62447-00032B216CCADF76</string>
+								<key>zIndex</key>
+								<integer>2</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>ScaleY</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>36</string>
+								<key>startTime</key>
+								<real>1</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleY</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>89DB9A7A-BFBF-4E56-8151-22FDCAC29582-62447-00032C3D1E8853FE</string>
+								<key>zIndex</key>
+								<integer>2</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>ScaleX</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>36</string>
+								<key>startTime</key>
+								<real>1</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleX</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>317578CC-EE22-4425-856E-E1F1D95CDBBF-62447-00032C3D1E5E322C</string>
+								<key>zIndex</key>
+								<integer>2</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>ScaleY</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>37</string>
+								<key>startTime</key>
+								<real>1</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleY</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>F82FCE4B-ADE3-4A9E-8952-4ACDB59CEAB2-62447-00032C3D1E32EADB</string>
+								<key>zIndex</key>
+								<integer>2</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>ScaleX</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>37</string>
+								<key>startTime</key>
+								<real>1</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ScaleX</string>
+									<key>objectValue</key>
+									<string>1</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>2F6CE35D-1638-481C-8D0F-6C9A8C16D9BD-62447-00032C3D1E068871</string>
+								<key>zIndex</key>
+								<integer>2</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>RotationAngleZ</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>13</string>
+								<key>startTime</key>
+								<real>10</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>RotationAngleZ</string>
+									<key>objectValue</key>
+									<string>90deg</string>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>0</integer>
+								<key>uuid</key>
+								<string>2B895F62-3709-4949-9C6B-A2808EA1E4AF-62447-00032B2B7F893C25</string>
+								<key>zIndex</key>
+								<integer>2</integer>
+							</dict>
+						</array>
+						<key>firstKeyframeIsRelative</key>
+						<false/>
+						<key>framesPerSecond</key>
+						<integer>30</integer>
+						<key>hidden</key>
+						<false/>
+						<key>identifier</key>
+						<string>32</string>
+						<key>loop</key>
+						<false/>
+						<key>name</key>
+						<string>finished</string>
 						<key>userDefinedDuration</key>
 						<real>0.0</real>
 					</dict>
@@ -4164,6 +5070,128 @@ function sparkle(hypeDocument, element, event) {
 					</dict>
 					<dict>
 						<key>endControlPoint</key>
+						<string>{0.64212201633165822, 0.95540201005025138}</string>
+						<key>endPoint</key>
+						<string>{0.73612201633165819, 0.95540201005025138}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.59760000000000002, 1.0469999999999999}</string>
+						<key>startPoint</key>
+						<string>{0.54400000000000004, 1.0469999999999999}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{0.82928391959798997, 1.0253219221105527}</string>
+						<key>endPoint</key>
+						<string>{0.91928391959799005, 1.0253219221105527}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.79912201633165825, 0.95540201005025138}</string>
+						<key>startPoint</key>
+						<string>{0.73612201633165819, 0.95540201005025138}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{1, 1}</string>
+						<key>endPoint</key>
+						<string>{1, 1}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.95328391959798997, 1.0253219221105527}</string>
+						<key>startPoint</key>
+						<string>{0.91928391959799005, 1.0253219221105527}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>closed</key>
+				<false/>
+				<key>interpolationPointCount</key>
+				<real>100</real>
+				<key>polygonSides</key>
+				<integer>0</integer>
+				<key>selectedControlPointIndexes</key>
+				<array>
+					<integer>4</integer>
+				</array>
+				<key>showAllControlPoints</key>
+				<true/>
+				<key>type</key>
+				<integer>0</integer>
+				<key>useIntegerValues</key>
+				<false/>
+				<key>useSmallStyle</key>
+				<true/>
+			</dict>
+			<key>hiddenFromTimingFunctionsMenu</key>
+			<true/>
+			<key>name</key>
+			<string>Custom</string>
+			<key>oid</key>
+			<string>11</string>
+			<key>originalOid</key>
+			<string>g</string>
+			<key>type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>bezierPath</key>
+			<dict>
+				<key>allowEndPointModification</key>
+				<false/>
+				<key>bezierCurves</key>
+				<array>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{0.085730998743718589, 1.0630888819095479}</string>
+						<key>endPoint</key>
+						<string>{0.1657309987437186, 1.0630888819095479}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.042500000000000003, 0.22}</string>
+						<key>startPoint</key>
+						<string>{0, 0}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{0.2656, 0.86799999999999999}</string>
+						<key>endPoint</key>
+						<string>{0.35599999999999998, 0.86799999999999999}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.2197309987437186, 1.0630888819095479}</string>
+						<key>startPoint</key>
+						<string>{0.1657309987437186, 1.0630888819095479}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{0.45700000000000002, 1.0469999999999999}</string>
+						<key>endPoint</key>
+						<string>{0.54400000000000004, 1.0469999999999999}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.40849999999999997, 0.86799999999999999}</string>
+						<key>startPoint</key>
+						<string>{0.35599999999999998, 0.86799999999999999}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>endControlPoint</key>
 						<string>{0.63700000000000001, 0.98399999999999999}</string>
 						<key>endPoint</key>
 						<string>{0.73099999999999998, 0.98399999999999999}</string>
@@ -4229,7 +5257,129 @@ function sparkle(hypeDocument, element, event) {
 			<key>name</key>
 			<string>Custom</string>
 			<key>oid</key>
-			<string>11</string>
+			<string>26</string>
+			<key>originalOid</key>
+			<string>g</string>
+			<key>type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>bezierPath</key>
+			<dict>
+				<key>allowEndPointModification</key>
+				<false/>
+				<key>bezierCurves</key>
+				<array>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{0.092562028894472348, 1.0586330087939699}</string>
+						<key>endPoint</key>
+						<string>{0.17256202889447236, 1.0586330087939699}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.042500000000000003, 0.22}</string>
+						<key>startPoint</key>
+						<string>{0, 0}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{0.2656, 0.86799999999999999}</string>
+						<key>endPoint</key>
+						<string>{0.35599999999999998, 0.86799999999999999}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.22656202889447236, 1.0586330087939699}</string>
+						<key>startPoint</key>
+						<string>{0.17256202889447236, 1.0586330087939699}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{0.45700000000000002, 1.0469999999999999}</string>
+						<key>endPoint</key>
+						<string>{0.54400000000000004, 1.0469999999999999}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.40849999999999997, 0.86799999999999999}</string>
+						<key>startPoint</key>
+						<string>{0.35599999999999998, 0.86799999999999999}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{0.63700000000000001, 0.98399999999999999}</string>
+						<key>endPoint</key>
+						<string>{0.73099999999999998, 0.98399999999999999}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.59760000000000002, 1.0469999999999999}</string>
+						<key>startPoint</key>
+						<string>{0.54400000000000004, 1.0469999999999999}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{0.82899999999999996, 1.006}</string>
+						<key>endPoint</key>
+						<string>{0.91900000000000004, 1.006}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.79400000000000004, 0.98399999999999999}</string>
+						<key>startPoint</key>
+						<string>{0.73099999999999998, 0.98399999999999999}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>endControlPoint</key>
+						<string>{1, 1}</string>
+						<key>endPoint</key>
+						<string>{1, 1}</string>
+						<key>endPointMovementMode</key>
+						<integer>0</integer>
+						<key>startControlPoint</key>
+						<string>{0.95299999999999996, 1.006}</string>
+						<key>startPoint</key>
+						<string>{0.91900000000000004, 1.006}</string>
+						<key>startPointMovementMode</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>closed</key>
+				<false/>
+				<key>interpolationPointCount</key>
+				<real>100</real>
+				<key>polygonSides</key>
+				<integer>0</integer>
+				<key>selectedControlPointIndexes</key>
+				<array>
+					<integer>1</integer>
+				</array>
+				<key>showAllControlPoints</key>
+				<true/>
+				<key>type</key>
+				<integer>0</integer>
+				<key>useIntegerValues</key>
+				<false/>
+				<key>useSmallStyle</key>
+				<true/>
+			</dict>
+			<key>hiddenFromTimingFunctionsMenu</key>
+			<true/>
+			<key>name</key>
+			<string>Custom</string>
+			<key>oid</key>
+			<string>28</string>
 			<key>originalOid</key>
 			<string>g</string>
 			<key>type</key>

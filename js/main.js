@@ -9,7 +9,7 @@ var ctx;
 // Enable author mode to create word data array code
 // Words data array contains position and colour information
 
-var authormode = true;
+var authormode = false;
 var colourCounter = 0;
 
 if(authormode){
@@ -166,10 +166,9 @@ function checkFirstLetters() {
         distanceX = startX - last_mousex;
         distanceY = startY - last_mousey;
         distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-        console.log("Distance between selection and first letter is " + distance);
 
         // If distance of first letter is within the threshold, check the second letter
-        if (distance < gridSquareSize) {
+        if (distance < gridSquareSize/2) {
             checkSecondLetter(i, startX, startY);
         }
     }
@@ -184,20 +183,27 @@ function checkSecondLetter(wordListIndex, startX, startY) {
     distanceX = endX - mousex;
     distanceY = endY - mousey;
     distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-    console.log("Distance between selection and last letter is " + distance);
 
     // If distance of second letter is within threshold, a word is found
-    if (distance < gridSquareSize) {
-        // Trigger tumult hype animation
-        HYPE.documents['banner'].functions().sparkle(HYPE.documents['banner'],'foo',event);
+    if (distance < gridSquareSize/2) {
         // Save the line data to previousLines array
         previousLines.push([startX, startY, mousex, mousey, wordList[wordListIndex][5]]);
-        //wordList[wordListIndex][4] = "<del>" + wordList[wordListIndex][4] + "</del>";
         // TRIGGER CSS CHANGE
         $('#' + wordList[wordListIndex][4]).toggleClass('complete');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawGrid();
         drawPreviousLines();
+        // Remove word from word list
+        // If word list is empty, trigger game finished animation
+        // Otherwise, play 'word found' animation (made in tumult hype)
+        wordList.splice([wordListIndex],1);
+        console.log(wordList);
+        if(wordList.length < 1){
+            HYPE.documents['banner'].startTimelineNamed('finished',HYPE.documents['banner'].kDirectionForward);
+        }
+        else {
+            HYPE.documents['banner'].functions().sparkle(HYPE.documents['banner'],'foo',event);
+        }
     }
 }
 
@@ -234,7 +240,7 @@ $(canvas).on('mouseup', function (e) {
 //Mouseup
 $(canvas).on('mouseup', function (e) {
     colourCounter ++;
-    if (colourCounter > colours.length){
+    if (authormode && colourCounter > colours.length){
         colourCounter = 0;
     }
 });

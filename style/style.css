@@ -9,6 +9,18 @@ canvas {
     float:left;
 }
 
+.tagline, .heading {
+    text-align: center;
+    font-family: 'Schoolbell', cursive;
+    color: blueviolet;
+    padding: 5px;
+}
+
+.heading{
+    font-size: 26pt;
+    color: cadetblue;
+}
+
 /* Word list + animations */
 
 #wordlist .wlrow {
@@ -39,7 +51,7 @@ canvas {
 }
 
 .column2 {
-    width: 450px;
+    width: 350px;
 }
 
 
